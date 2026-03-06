@@ -9,20 +9,20 @@ This section aims to answer common questions related to the server and managing 
 
 ## Why are multiple books showing as the same book?
 
-This is almost always due to not following the [required directory structure](/docs/libraries/book-library/directory-structure#directory-structure) of one folder per book. This incorrect grouping can also persist even after fixing your library directory structure because the Audiobookshelf tracks file moves by file inode, so once the server has grouped the files under the same book you will need to remove the book from the Audiobookshelf database and scan your library again.
+This is almost always due to not following the [required directory structure](/docs/documentation/libraries/book-library/directory-structure#directory-structure) of one folder per book. This incorrect grouping can also persist even after fixing your library directory structure because the Audiobookshelf tracks file moves by file inode, so once the server has grouped the files under the same book you will need to remove the book from the Audiobookshelf database and scan your library again.
 
 A common cause of this issue is using other tools to manage or move files around your library structure with "watch for file changes" enabled, so the Audiobookshelf server may incorrectly merge files if it scans the directory at the same time.
 
 ## How is metadata pulled in from scans?
 
-Scans can pull information from your folder names, audio file meta tags, or other metadata files in the directory based on the [library metadata priority](/docs/libraries/book-library/book-metadata).
+Scans can pull information from your folder names, audio file meta tags, or other metadata files in the directory based on the [library metadata priority](/docs/documentation/libraries/book-library/book-metadata).
 Metadata is only pulled from external online providers when using the "Match" or "Quick Match" features.
 
-You can also use a `desc.txt`, `reader.txt` and `.opf` file to pull data into Abs. See [here](/docs/libraries/book-library/directory-structure#file-metadata)
+You can also use a `desc.txt`, `reader.txt` and `.opf` file to pull data into Abs. See [here](/docs/documentation/libraries/book-library/directory-structure#file-metadata)
 
 ## Why does audiobookshelf not get data from the internet automatically during a scan?
 
-Scanning and matching are two different operations. A "scan" is when your local files are scanned for metadata based on the ["Library Scanner" precedence](/docs/libraries/book-library/book-metadata). A "Match" is using the metadata ABS already has from the scan to try and match your book against an online metadata provider.
+Scanning and matching are two different operations. A "scan" is when your local files are scanned for metadata based on the ["Library Scanner" precedence](/docs/documentation/libraries/book-library/book-metadata). A "Match" is using the metadata ABS already has from the scan to try and match your book against an online metadata provider.
 
 Scanning can occur automatically when using the File Watcher, which watches for changes to your files, or by setting up Periodic Scans in the library settings.
 
