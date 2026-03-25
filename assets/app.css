@@ -1,0 +1,88 @@
+@import "./fonts.css";
+@import "./prism.css";
+
+.bg-gradient {
+  background-image: linear-gradient(
+    to right bottom,
+    #2e2e2e,
+    #303030,
+    #313131,
+    #333333,
+    #353535,
+    #343434,
+    #323232,
+    #313131,
+    #2c2c2c,
+    #282828,
+    #232323,
+    #1f1f1f
+  );
+}
+
+/* override prism padding */
+pre[class*="language-"] {
+  /* padding: 0.25em 1em; */
+  white-space: pre-line;
+}
+
+/* custom scrollbar */
+::-webkit-scrollbar {
+  width: 24px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #525252;
+  border-radius: 20px;
+  border: 6px solid transparent;
+  background-clip: content-box;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #6b6b6b;
+}
+
+.warn {
+  border: 1px solid black;
+  border-radius: 5px;
+  background-color: rgb(38, 38, 38);
+  padding: 6px;
+  display: flex;
+  align-items: center;
+  margin: 2px 0;
+}
+
+.warn::before {
+  color: orange;
+  content: "⚠";
+  display: inline-block;
+  font-size: x-large;
+  margin: 4px 14px;
+}
+
+.warn li {
+  margin: 0;
+}
+
+.inline-warning-badge {
+  background: #ff9800dd;
+  color: #111;
+  border-radius: 6px;
+  padding: 2px 6px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  margin-left: 8px;
+}
+
+.inline-success-badge {
+  background: #3c8f3e;
+  color: #fff;
+  border-radius: 6px;
+  padding: 2px 6px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  margin-left: 8px;
+}
