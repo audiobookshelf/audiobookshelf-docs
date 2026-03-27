@@ -5,7 +5,7 @@ title: Uploading
 sidebar_position: 10  
 ---
 
-You can use the built-in upload feature to add new books to your library. This makes sure that files follow the correct library structure.
+You can use the built-in upload feature to add new books to your library. This makes sure that files follow the correct library structure of one book per folder.
 
 You can choose the library you want to add your books to before uploading. Within a library, you can have multiple folders, and you can select which folder to upload to.
 

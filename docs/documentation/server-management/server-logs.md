@@ -5,7 +5,7 @@ title: Logs
 sidebar_position: 1.5
 ---
 
-The Audiobookshelf server supports 3 log levels: `Warn`, `Info`, and `Debug`. By default, server log levels are set to `Info`.
+Three log leves are supported: `Warn`, `Info`, and `Debug`. By default, server log levels are set to `Info` for new installations.
 
 All daily logs are stored in `/metadata/logs/daily` as JSON files and can be viewed in the web client. Note that logs are only stored for the current log level, so if you have the server set to log `Info`, no `Debug` level logs will be stored.
 
