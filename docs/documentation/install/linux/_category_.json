@@ -1,6 +1,9 @@
 {
   "label": "Linux Install",
   "position": 1.02,
+  "customProps": {
+    "icon": "logos:linux-tux"
+  },
   "collapsed": false,
   "collapsible": true
 }

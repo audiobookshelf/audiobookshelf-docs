@@ -1,6 +1,9 @@
 {
   "label": "One-Click Deployment",
   "position": 1.07,
+  "customProps": {
+    "icon": "mdi:gesture-tap-button"
+  },
   "collapsed": true,
   "collapsible": true
 }

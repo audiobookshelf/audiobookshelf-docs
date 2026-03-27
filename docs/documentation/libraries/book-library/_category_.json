@@ -2,6 +2,9 @@
   "label": "Book Library",
   "collapsed": true,
   "position": 2,
+  "customProps": {
+    "icon": "simple-icons:audiobookshelf"
+  },
   "link": {
     "type": "generated-index",
     "description": "These pages describe managing an audiobook or ebook library on the Audiobookshelf server."
