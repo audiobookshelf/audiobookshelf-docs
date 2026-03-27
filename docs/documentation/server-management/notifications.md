@@ -5,7 +5,7 @@ title: Notifications
 sidebar_position: 1.6
 ---
 
-The Audiobookshelf uses [Apprise](https://github.com/caronc/apprise) to provide notification functionality for a variety of services. Additional service-specific notification functionality will not be built into Audiobookshelf.
+[Apprise](https://github.com/caronc/apprise) is used for all notification functionality by the server. Additional service-specific notification functionality will not be built into Audiobookshelf.
 
 You will need to have an instance of the **Apprise API** running, or another API endpoint that can handle the same requests.
 
