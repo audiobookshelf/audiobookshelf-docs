@@ -1,29 +1,11 @@
 ---
-id: server-settings
-sidebar_label: Server Settings
-title: Server Settings
+id: caching
+sidebar_label: Caching
+title: Caching
 sidebar_position: 1.0
 ---
 
-The Audiobookshelf server is managed through the web client by Admin accounts. The administrative pages include:
-
-- General Server Settings
-- Library Creation
-- User Management
-- API Key Management
-- List of Listening Sessions
-- Database Backup Management
-- Logs
-- Notification Configuration
-- Send to E-reader Management
-- Item Metadata Utilities
-- Open RSS Feed Management
-- Authentication Settings
-- Server and Library Stats
-
-## Caching
-
-The Audiobookshelf server uses two caches: file cache and API cache.
+Two caches are used: file cache and API cache.
 
 ### File Cache
 
