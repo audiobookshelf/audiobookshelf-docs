@@ -36,22 +36,16 @@ A collection of tools designed to assist with Audiobookshelf-related tasks. Plea
 
 Sync your audiobook reading progress from Audiobookshelf to Hardcover automatically
 
+## [ABS KoSync Bridge](https://github.com/cporcellijr/abs-kosync-bridge)
+
+ABS-KoSync Enhanced is a powerful synchronization engine that bridges the gap between Audiobookshelf and KOReader. It ensures your reading and listening progress is always perfectly aligned, whether you're on your e-reader or listening on the go.
+
 ## [ABS Autoconverter](https://github.com/Vito0912/abs-autoconverter)
 
 This tool converts your media files according to defined rules. This can also queue your encoding tasks and run them in the background for new and existing files.
 
 :::warning
 This tool changes your media files. Be sure to make a backup of your files before using this tool. The backup made by Audiobookshelf does not include your media files.
-:::
-
-## [Complete My Series](https://github.com/xFrieDSpuDx/completeseries)
-
-Find audiobooks missing from a series you own. This works for Audible series only.
-
-:::note
-A hosted version is available on the project's GitHub page. This only works with Audiobookshelf instances that are publicly accessible.
-
-This sends your data through their server. In theory, this means the hosted server can read your data (including username and password). For better privacy and security, use your own instance.
 :::
 
 ## [Audiobookshelf Calibre Plugin](https://github.com/jbhul/Audiobookshelf-calibre-plugin)

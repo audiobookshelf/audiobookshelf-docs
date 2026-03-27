@@ -74,10 +74,10 @@ There are several options for Apple users in the meantime:
 
 ## Are there any 3rd-party apps?
 
-We encourage the creation of 3rd-party apps by providing the [Audiobookshelf API](https://api.audiobookshelf.org/).
+We encourage the creation of 3rd-party apps.
 Users are advised to exercise caution and discretion when using third-party apps, as their quality and security may vary.
 
-This list serves as a means of discovering third-party apps. These apps are not affiliated with or supported by Audiobookshelf.
+These apps are not affiliated with or supported by Audiobookshelf.
 Any issues with the apps should be directed to the app maintainers through appropriate channels.
 
 ## I want to build a client app. What are the rules?
