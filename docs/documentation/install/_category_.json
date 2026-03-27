@@ -1,5 +1,9 @@
 {
   "label": "Installation",
   "collapsed": true,
-  "position": 1
+  "position": 1,
+  "link": {
+    "type": "generated-index",
+    "description": "This section describes methods to install the Audiobookshelf server."
+  }
 }

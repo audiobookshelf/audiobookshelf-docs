@@ -1,5 +1,9 @@
 {
   "label": "Libraries",
   "collapsed": true,
-  "position": 2
+  "position": 2,
+  "link": {
+    "type": "generated-index",
+    "description": "The Audiobookshelf server organizes your media into libriaries. Each library is distinct and can be configured with its own settings."
+  }
 }

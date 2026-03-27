@@ -1,5 +1,10 @@
 {
   "label": "Common Content",
   "collapsed": true,
-  "position": 3
+  "position": 1,
+  "link": {
+    "type": "generated-index",
+    "description": "Book and podcast libraries have some common features. This section describes those features and how they work across both library types."
+  }
+
 }
