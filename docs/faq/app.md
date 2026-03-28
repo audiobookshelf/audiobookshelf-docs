@@ -45,11 +45,11 @@ Note that the exact release and clear time may vary by a few days depending on h
 
 | App Version  | Release Date | Clear Date   |
 | ------------ | ------------ | ------------ |
-| v0.9.77-beta | Nov 6, 2024  | Feb 4, 2025  |
-| v0.9.78-beta | Jan 19, 2025 | Apr 19, 2025 |
-| v0.9.79-beta | Jan 26, 2025 | Apr 26, 2025 |
 | v0.9.81-beta | Apr 26, 2025 | Jul 25, 2025 |
 | v0.10.0-beta | Jul 21, 2025 | Oct 19, 2025 |
+| v0.10.1-beta | Sep  4, 2025 | Dec  3, 2025 |
+| v0.11.0-beta | Nov 24, 2025 | Feb 22, 2026 |
+| v0.12.0-beta | Feb 11, 2026 | May 12, 2026 |
 
 ## How do I get an invite to Testflight?
 
@@ -74,9 +74,8 @@ There are several options for Apple users in the meantime:
 
 ## Are there any 3rd-party apps?
 
-We encourage the creation of 3rd-party apps.
+We encourage the creation of [3rd-party apps](/docs/documentation/community/community-apps).
 Users are advised to exercise caution and discretion when using third-party apps, as their quality and security may vary.
-
 These apps are not affiliated with or supported by Audiobookshelf.
 Any issues with the apps should be directed to the app maintainers through appropriate channels.
 
