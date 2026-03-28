@@ -4,15 +4,7 @@ title: Metadata Providers
 sidebar_position: 3
 ---
 
-:::warning
-
-The following projects are not maintained by the Audiobookshelf team nor did any of the Audiobookshelf team member check them for security issues. **Use at your own risk.**
-
-:::
-
-## Adding custom provider in ABS
-
-A custom provider can be added to ABS through "Metadata Tools" in the server settings.
+Custom book metadata providers can be added to your Audiobookshelf server through the "Metadata Tools" in teh server settings.
 To add a custom provider you will need the address of the provider (a URL if a public community provider or the IP and port if you're running the custom provider yourself).
 If an authorization token is needed you will also add that here.
 
@@ -23,6 +15,12 @@ If an authorization token is needed you will also add that here.
 The request and response format that ABS expects for the API is defined in [this OpenAPI spec](https://github.com/advplyr/audiobookshelf/blob/master/custom-metadata-provider-specification.yaml).
 
 ## Community providers
+
+:::warning
+
+The following projects are not maintained by the Audiobookshelf team nor did any of the Audiobookshelf team member check them for security issues. **Use at your own risk.**
+
+:::
 
 These custom metadata providers have been made by the community and are not maintained as part of the core project.
 Please refer to the provider documentation for information about how to set up the provider and the authorization value.

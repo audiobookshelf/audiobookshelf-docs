@@ -10,7 +10,9 @@ The following projects are not maintained by the Audiobookshelf team nor did any
 
 :::
 
-There is a community-curated list of Audiobookshelf-related apps and projects. Many projects not added to the list by the authors below can be found there. This list is not maintained by the Audiobookshelf team. You can find it at [ABS Toolbox - Projects](https://abstoolbox.vito0912.de/projects).
+This is a community-curated list of Audiobookshelf-related tools. If you have a tool to recommend, please open a PR to add the tool to this list. Please ensure the tool is stable as we have been seeing an increasing number of vibe-coded projects that are quickly abandoned.
+
+Another list of tools can be found at [ABS Toolbox - Projects](https://abstoolbox.vito0912.de/projects), but that list is not actively maintained so some information will be out of date.
 
 ---
 

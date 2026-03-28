@@ -10,7 +10,9 @@ The following projects are not maintained by the Audiobookshelf team nor did any
 
 :::
 
-There is a community-curated list of Audiobookshelf-related apps and projects. Apps that are not added to the list below can be found there, along with the features of each app. This list is not maintained and does not represent the opinion of the Audiobookshelf team. You can find it at [ABS Toolbox - Clients](https://abstoolbox.vito0912.de/clients).
+This is a community-curated list of Audiobookshelf-related apps and projects. If you know of an app to recommend for this list, please open a PR to add the app to this list. Please ensure the app is stable and relatively mature, because we have been seeing an increase of vibe-coded apps that are abandoned after a few weeks or months.
+
+Another list of 3rd party apps can be found at [ABS Toolbox - Clients](https://abstoolbox.vito0912.de/clients), but that list is not actively maintained so some information will be out of date.
 
 ---
 
