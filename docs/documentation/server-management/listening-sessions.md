@@ -5,7 +5,7 @@ title: Listening Sessions
 sidebar_position: 1.3
 ---
 
-The Listening Sessions page includes all previous and current listening sessions.
+All previous and current listening sessions can be viewed for the server or filtered by user.
 
 Previous listening sessions can be deleted from the extra details popup or by selecting listening sessions from the table, and currently open listening sessions can also be closed from this page.
 

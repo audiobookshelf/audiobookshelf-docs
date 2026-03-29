@@ -90,3 +90,9 @@ If OIDC is misconfigured or unavailable, you can bypass SSO by navigating direct
 ```text
 https://example.com/login/?autoLaunch=0
 ```
+
+If you have disabled the local login and are unable to log in using OIDC, you will need to manually modify the database to reenable local login. Make sure to make a backup of the database before modification. The setting is found under:
+- Table: `settings`
+- Row: `server-settings`
+- Key: `"authActiveAuthMethods"`
+- Value to add: `"local"`

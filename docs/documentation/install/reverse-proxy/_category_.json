@@ -1,5 +1,8 @@
 {
   "label": "Reverse Proxy",
+  "customProps": {
+    "icon": "mdi:router-network"
+  },
   "collapsed": true,
   "position": 8
 }

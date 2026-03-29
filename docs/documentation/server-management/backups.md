@@ -5,7 +5,7 @@ title: Backups
 sidebar_position: 1.4
 ---
 
-The Audiobookshelf server provides a way to make and restore database backups. These backups only include the Audiobookshelf database and the metadata for media items and authors.
+Databse backups allow restoring a previous state of the database. These backups only include the Audiobookshelf database and cover images stored in the `metadata/` directory, no media files or covers stored with library items are backed up.
 
 By default, backups are stored in `/metadata/backups`. You can configure this location using this interface or an [environment variable](/docs/documentation/install/configuration). If you set the backup path using an environment variable, you will be unable to edit this path from the web interface.
 
@@ -14,7 +14,7 @@ You can configure how many backups to keep and a maximum size for your backups. 
 :::warning
 
 - Backups do not contain any media files, you must manage those backups using another method.
-- Backups cannot be loaded from another installation method without losing progress and metadata.
+- Backups cannot be loaded from another installation method without losing progress and metadata. You can only restore Windows backups on Windows installs and Linux backups on Linux installs without manually modifying the database.
 
 :::
 
