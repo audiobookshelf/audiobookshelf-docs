@@ -6,19 +6,21 @@ sidebar_position: 1
 
 :::warning
 
-The following projects are not maintained by the Audiobookshelf team nor did any of the Audiobookshelf team member check them for security issues. **Use at your own risk.**
+The following projects are not maintained or tested by the Audiobookshelf team. No Audiobookshelf team members have checked them for security issues or incorrect API usage resulting in data loss. **Use at your own risk.**
 
 :::
 
-This is a community-curated list of Audiobookshelf-related apps and projects. If you know of an app to recommend for this list, please open a PR to add the app to this list. Please ensure the app is stable and relatively mature, because we have been seeing an increase of vibe-coded apps that are abandoned after a few weeks or months.
+This is a list of 3rd party apps made by the community.
 
-Another list of 3rd party apps can be found at [ABS Toolbox - Clients](https://abstoolbox.vito0912.de/clients), but that list is not actively maintained so some information will be out of date.
+If you have created an app or client and want to add it to the list, please open a PR against this documentation to add your client. Please ensure the app is stable and relatively mature, because we have been seeing an increase of vibe-coded apps that are abandoned after a few weeks or months.
+
+The maintainer of the 3rd party app is responsible for creating and updating their entry on this list up to date. We are not accepting updates to this list on behalf of somebody else to ensure 3rd party app maintainers are aware of their app being on this list.
 
 ---
 
 :::info
 
-ABS is constantly changing, and the API is updated often. Many of these apps use endpoints that are not recommended anymore and could cause problems or in general produce unwanted behaviour, such as incorrect stats, negative or wrong listening sessions, wrong last online times, and getting around restrictions set by the server admin. If you notice any of these problems, please let the app developers know.
+ABS is under constant development, and the API has ongoing updates. Many 3rd-party apps use endpoints that are not recommended anymore and could cause problems or in general produce unwanted behaviour, such as incorrect stats, negative or wrong listening sessions, wrong last online times, or getting around restrictions set by the server admin. If you notice any of these problems, please let the app developers know.
 
 :::
 
