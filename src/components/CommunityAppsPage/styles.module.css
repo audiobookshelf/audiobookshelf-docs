@@ -1,112 +1,41 @@
+/* Page wrapper:
+   Keeps the card grid centered and gives it some breathing room. */
 .page {
   display: flex;
   flex-direction: column;
-  gap: 1.25rem;
+  gap: 1rem;
   padding-bottom: 2rem;
 }
 
-.hero {
-  display: flex;
-  flex-direction: column;
-  gap: 0.55rem;
-  padding: 1rem 0 0.25rem;
-}
-
-.eyebrow {
-  margin: 0;
-  color: var(--ifm-color-primary);
-  font-size: 0.82rem;
-  font-weight: 700;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-}
-
-.title {
-  margin: 0;
-  font-size: clamp(2.25rem, 4vw, 3.4rem);
-  line-height: 1;
-  letter-spacing: -0.04em;
-}
-
-.lead {
-  max-width: 46rem;
-  margin: 0;
-  color: var(--ifm-color-emphasis-700);
-  font-size: 1.08rem;
-  line-height: 1.6;
-}
-
-.noticeStack {
-  display: grid;
-  gap: 0.85rem;
-}
-
-.notice {
-  margin: 0;
-}
-
-.intro {
-  max-width: 54rem;
-  margin: 0;
-  font-size: 1rem;
-  line-height: 1.7;
-}
-
-.introNote {
-  padding: 1rem 1.1rem;
-  border: 1px solid var(--ifm-color-emphasis-200);
-  border-radius: 1rem;
-  background: linear-gradient(
-    180deg,
-    var(--ifm-color-emphasis-100),
-    var(--ifm-background-color)
-  );
-  color: var(--ifm-color-emphasis-800);
-  line-height: 1.6;
-}
-
+/* Main card grid:
+   This is the layout rule that is still important. Everything else below is
+   just styling for the card contents. */
 .grid {
   display: grid;
   gap: 1rem;
   grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
 }
 
+/* Card shell:
+   Basic bordered box styling. No custom color accents are used anymore. */
 .card {
-  position: relative;
   display: flex;
   flex-direction: column;
   min-height: 100%;
-  overflow: hidden;
-  padding: 1.1rem;
-  border: 1px solid color-mix(in srgb, var(--card-accent) 28%, var(--ifm-color-emphasis-200));
-  border-radius: 1.1rem;
-  background:
-    radial-gradient(circle at top right, color-mix(in srgb, var(--card-accent) 20%, transparent) 0, transparent 42%),
-    linear-gradient(180deg, var(--ifm-background-surface-color), var(--ifm-background-color));
-  box-shadow: 0 10px 30px rgb(0 0 0 / 5%);
-  transition:
-    transform var(--ifm-transition-fast) ease,
-    box-shadow var(--ifm-transition-fast) ease,
-    border-color var(--ifm-transition-fast) ease;
+  padding: 1rem;
+  border: 1px solid var(--ifm-color-emphasis-200);
+  border-radius: 0.9rem;
+  background: var(--ifm-background-surface-color);
+  box-shadow: 0 1px 2px rgb(0 0 0 / 4%);
 }
 
 .card:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 14px 36px rgb(0 0 0 / 10%);
+  border-color: var(--ifm-color-emphasis-300);
 }
 
-.cardGlow {
-  position: absolute;
-  inset: auto -3rem -3rem auto;
-  width: 10rem;
-  height: 10rem;
-  background: color-mix(in srgb, var(--card-accent) 22%, transparent);
-  filter: blur(28px);
-  pointer-events: none;
-}
-
+/* Header section inside each card:
+   Keeps the platform badges, title, and summary spaced consistently. */
 .cardTop {
-  position: relative;
   display: flex;
   flex: 1 1 auto;
   flex-direction: column;
@@ -123,9 +52,10 @@
   display: inline-flex;
   align-items: center;
   gap: 0.35rem;
-  padding: 0.34rem 0.55rem;
+  padding: 0.3rem 0.55rem;
+  border: 1px solid var(--ifm-color-emphasis-200);
   border-radius: 999px;
-  background: color-mix(in srgb, var(--card-accent) 13%, var(--ifm-color-emphasis-100));
+  background: var(--ifm-color-emphasis-100);
   color: var(--ifm-color-emphasis-800);
   font-size: 0.72rem;
   font-weight: 700;
@@ -140,9 +70,8 @@
 
 .cardTitle {
   margin: 0;
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   line-height: 1.2;
-  letter-spacing: -0.02em;
 }
 
 .cardTitle a {
@@ -157,36 +86,18 @@
 .cardDescription {
   margin: 0;
   color: var(--ifm-color-emphasis-700);
-  line-height: 1.65;
+  line-height: 1.6;
 }
 
+/* Footer section:
+   Holds the main project link and any secondary links. */
 .cardFooter {
-  position: relative;
-  z-index: 1;
   display: flex;
   flex-direction: column;
   gap: 0.75rem;
   margin-top: 1rem;
 }
 
-.primaryLink {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  padding: 0.7rem 0.95rem;
-  border-radius: 0.8rem;
-  background: var(--card-accent);
-  color: white;
-  font-weight: 700;
-  text-decoration: none;
-  transition: filter var(--ifm-transition-fast) ease, transform var(--ifm-transition-fast) ease;
-}
-
-.primaryLink:hover {
-  color: white;
-  filter: brightness(1.05);
-  transform: translateY(-1px);
-}
 
 .actions {
   display: flex;
@@ -209,7 +120,7 @@
 }
 
 .actionLink:hover {
-  border-color: var(--card-accent);
+  border-color: var(--ifm-color-emphasis-500);
   color: var(--ifm-color-emphasis-900);
   text-decoration: none;
 }
@@ -220,10 +131,6 @@
 }
 
 @media (max-width: 996px) {
-  .page {
-    gap: 1rem;
-  }
-
   .grid {
     grid-template-columns: 1fr;
   }

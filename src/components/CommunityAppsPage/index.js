@@ -47,7 +47,7 @@ function ExternalLink({href, label, icon}) {
 
 function AppCard({app}) {
   return (
-    <article className={styles.card} style={{'--card-accent': app.accent}}>
+    <article className={styles.card}>
       <div className={styles.cardTop}>
         <div className={styles.platformRow}>
           {app.platforms.map((platform) => (
@@ -65,13 +65,6 @@ function AppCard({app}) {
       </div>
 
       <div className={styles.cardFooter}>
-        <a
-          className={styles.primaryLink}
-          href={app.href}
-          target="_blank"
-          rel="noreferrer">
-          Open project
-        </a>
         <div className={styles.actions}>
           {app.links.map((link) => (
             <ExternalLink

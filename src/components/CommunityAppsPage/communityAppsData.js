@@ -2,7 +2,6 @@ export const communityApps = [
   {
     name: 'ShelfPlayer',
     platforms: ['iOS', 'iPadOS'],
-    accent: '#4f7cff',
     href: 'https://github.com/rasmuslos/ShelfPlayer',
     description:
       'A sleek and modern Audiobookshelf client designed for audiobooks, podcasts, iOS, and iPadOS.',
@@ -22,7 +21,6 @@ export const communityApps = [
   {
     name: 'Plappa',
     platforms: ['iOS', 'iPadOS'],
-    accent: '#7c5cff',
     href: 'https://plappa.me/',
     description:
       'Audiobook player for Jellyfin and Audiobookshelf, written in Swift and SwiftUI.',
@@ -42,7 +40,6 @@ export const communityApps = [
   {
     name: 'Still',
     platforms: ['iOS'],
-    accent: '#00b8a9',
     href: 'https://github.com/7enChan/stillapp',
     description: 'A clean, minimalist audiobook player for Audiobookshelf.',
     links: [
@@ -61,7 +58,6 @@ export const communityApps = [
   {
     name: 'Prologue',
     platforms: ['iOS'],
-    accent: '#ff8a4c',
     href: 'https://prologue.audio/',
     description:
       'Originally designed for Plex. Audiobookshelf support is coming in v4.',
@@ -82,7 +78,6 @@ export const communityApps = [
   {
     name: 'SoundLeaf',
     platforms: ['iOS'],
-    accent: '#f05a7e',
     href: 'https://soundleafapp.com/',
     description: 'A premium Audiobookshelf client.',
     links: [
@@ -101,7 +96,6 @@ export const communityApps = [
   {
     name: 'ABS-wear',
     platforms: ['Wear OS'],
-    accent: '#2ecc71',
     href: 'https://github.com/RasmusKoit/abs_wear',
     description: 'A standalone version for Android Wear OS 4.0.',
     links: [
@@ -115,7 +109,6 @@ export const communityApps = [
   {
     name: 'Lissen',
     platforms: ['Android'],
-    accent: '#ffb300',
     href: 'https://github.com/GrakovNe/lissen-android',
     description:
       'A free, aesthetic Audiobookshelf client designed for seamless listening.',
@@ -130,7 +123,6 @@ export const communityApps = [
   {
     name: 'Buchable',
     platforms: ['Android', 'Windows', 'Linux', 'Web'],
-    accent: '#36c2ff',
     href: 'https://github.com/Vito0912/abs_flutter',
     description:
       'A feature-rich cross-platform Audiobookshelf client with support for audiobooks, podcasts, caching, and more.',
@@ -145,7 +137,6 @@ export const communityApps = [
   {
     name: 'Harmshelf',
     platforms: ['HarmonyOS'],
-    accent: '#bf5bff',
     href: 'https://github.com/shanyan-wcx/Harmshelf',
     description:
       'A native Audiobookshelf client for HarmonyOS, supporting mobile phones, tablets, and PC/2in1.',
