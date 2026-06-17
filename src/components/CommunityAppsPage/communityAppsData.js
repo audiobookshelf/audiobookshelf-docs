@@ -46,9 +46,9 @@ export const communityApps = [
       'A free, aesthetic Audiobookshelf client designed for seamless listening.',
   },
   {
-    name: 'Buchable',
+    name: 'yaabsa',
     platforms: ['Android', 'Windows', 'Linux', 'Web'],
-    href: 'https://github.com/Vito0912/abs_flutter',
+    href: 'https://github.com/Vito0912/yaabsa/',
     description:
       'A feature-rich cross-platform Audiobookshelf client with support for audiobooks, podcasts, caching, and more.',
   },
