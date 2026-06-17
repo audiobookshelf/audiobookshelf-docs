@@ -37,10 +37,9 @@ Note that the exact release and clear time may vary by a few days depending on h
 
 | App Version  | Release Date | Clear Date   |
 | ------------ | ------------ | ------------ |
-| v0.10.0-beta | Jul 21, 2025 | Oct 19, 2025 |
-| v0.10.1-beta | Sep  4, 2025 | Dec  3, 2025 |
 | v0.11.0-beta | Nov 24, 2025 | Feb 22, 2026 |
 | v0.12.0-beta | Feb 11, 2026 | May 12, 2026 |
+| v0.13.0-beta | May 11, 2026 | Aug  9, 2026 |
 
 ## How long do TestFlight spots stay open after being cleared?
 
