@@ -12,14 +12,14 @@ This page answers common questions about the mobile app beta. This is a separate
 The apps are still very much a work-in-progress.
 The current main focus is on improving the server and standardizing/updating the API using the web client because the web client ships with the server (but apps have a different release/update cadence).
 
-There is not an exact date as to when the apps will be out of beta.
+There is not an expected release date for the first-party apps to leave beta.
 A number of 3rd party apps are also available, some free and some paid, for both Android and iOS.
 The apps will likely leave beta before all originally planned features are realized to allow more users to use the app, but there is no estimate on when this will happen.
 
 Android has more features than iOS, but all features are planned for both Android and iOS.
 
 There is an outdated checklist tracking the main remaining bugs for the iOS app located [here](https://github.com/advplyr/audiobookshelf-app/issues/541), but it also depends on the ongoing API and data model updates from the server.
-_Please do not_ leave additional comments on this issue that are just requests to release the app, this has already been communicated in various GitHub and Discord discussions (see [General FAQ](/docs/faq/general#i-have-a-feature-request-how-should-i-bring-this-up)).
+_Please do not_ leave additional comments on this issue that are just requests to release the app, this has already been communicated many times in various GitHub and Discord discussions (see [General FAQ](/docs/faq/general#i-have-a-feature-request-how-should-i-bring-this-up)).
 
 ## Why are there limited iOS beta seats? Why is there no limit for Android?
 
