@@ -67,5 +67,5 @@ There are several options for Apple users in the meantime:
 
 - Use the web client or save as a Progressive Web App (PWA). Note that this does not support offline use.
 - Sideload the official app. You can use something like AltStore or [SideStore](https://sidestore.io/) to sideload the IPA of the [most recent app release](https://github.com/advplyr/audiobookshelf-app/releases). You will need to manually update sideloaded apps.
-- Use a 3rd party app which integrates with ABS.
+- Use a [3rd party app](/docs/documentation/community/community-apps) which integrates with ABS.
 - Download the media files from the web client and use a dedicated audiobook or ebook app. These will not sync your progress with the ABS server.
