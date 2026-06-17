@@ -3,6 +3,7 @@ export const communityApps = [
     name: 'ShelfPlayer',
     platforms: ['iOS', 'iPadOS'],
     href: 'https://github.com/rasmuslos/ShelfPlayer',
+    tags: ['Audiobooks', 'Podcasts'],
     description:
       'A sleek and modern Audiobookshelf client designed for audiobooks, podcasts, iOS, and iPadOS.',
   },
@@ -10,6 +11,7 @@ export const communityApps = [
     name: 'Plappa',
     platforms: ['iOS', 'iPadOS'],
     href: 'https://plappa.me/',
+    tags: ['Audiobooks'],
     description:
       'Audiobook player for Jellyfin and Audiobookshelf, written in Swift and SwiftUI.',
   },
@@ -17,12 +19,14 @@ export const communityApps = [
     name: 'Still',
     platforms: ['iOS'],
     href: 'https://github.com/7enChan/stillapp',
+    tags: ['Audiobooks'],
     description: 'A clean, minimalist audiobook player for Audiobookshelf.',
   },
   {
     name: 'Prologue',
     platforms: ['iOS'],
     href: 'https://prologue.audio/',
+    tags: ['Audiobooks'],
     description:
       'Originally designed for Plex. Audiobookshelf support is coming in v4.',
   },
@@ -30,18 +34,21 @@ export const communityApps = [
     name: 'SoundLeaf',
     platforms: ['iOS'],
     href: 'https://soundleafapp.com/',
+    tags: ['Audiobooks'],
     description: 'A premium Audiobookshelf client.',
   },
   {
     name: 'ABS-wear',
     platforms: ['Wear OS'],
     href: 'https://github.com/RasmusKoit/abs_wear',
+    tags: ['Audiobooks'],
     description: 'A standalone version for Android Wear OS 4.0.',
   },
   {
     name: 'Lissen',
     platforms: ['Android'],
     href: 'https://github.com/GrakovNe/lissen-android',
+    tags: ['Audiobooks'],
     description:
       'A free, aesthetic Audiobookshelf client designed for seamless listening.',
   },
@@ -49,6 +56,7 @@ export const communityApps = [
     name: 'yaabsa',
     platforms: ['Android', 'Windows', 'Linux', 'Web'],
     href: 'https://github.com/Vito0912/yaabsa/',
+    tags: ['Audiobooks', 'Podcasts', 'Ebooks'],
     description:
       'A feature-rich cross-platform Audiobookshelf client with support for audiobooks, podcasts, caching, and more.',
   },
@@ -56,6 +64,7 @@ export const communityApps = [
     name: 'Harmshelf',
     platforms: ['HarmonyOS'],
     href: 'https://github.com/shanyan-wcx/Harmshelf',
+    tags: ['Audiobooks'],
     description:
       'A native Audiobookshelf client for HarmonyOS, supporting mobile phones, tablets, and PC/2in1.',
   },

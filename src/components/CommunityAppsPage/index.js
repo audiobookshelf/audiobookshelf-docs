@@ -11,6 +11,8 @@ const sortOptions = [
   {value: 'platforms-asc', label: 'Fewest platforms'},
 ];
 
+const tagOptions = ['Audiobooks', 'Podcasts', 'Ebooks'];
+
 function PlatformBadge({label}) {
   // If you need a new icon, add it to this mapping
   const icons = {
@@ -50,6 +52,16 @@ function AppCard({app}) {
         </h2>
 
         <p className={styles.cardDescription}>{app.description}</p>
+
+        {app.tags?.length ? (
+          <div className={styles.tagRow} aria-label={`${app.name} tags`}>
+            {app.tags.map((tag) => (
+              <span key={tag} className={styles.tagBadge}>
+                {tag}
+              </span>
+            ))}
+          </div>
+        ) : null}
       </div>
     </article>
   );
@@ -69,11 +81,17 @@ export default function CommunityAppsPage() {
   }, []);
 
   const [selectedPlatform, setSelectedPlatform] = useState('All');
+  const [selectedTags, setSelectedTags] = useState([]);
   const [sortBy, setSortBy] = useState('name-asc');
 
   const visibleApps = [...communityApps]
     .filter((app) =>
       selectedPlatform === 'All' ? true : app.platforms.includes(selectedPlatform),
+    )
+    .filter((app) =>
+      selectedTags.length === 0
+        ? true
+        : selectedTags.some((tag) => app.tags?.includes(tag)),
     )
     .sort((a, b) => {
       switch (sortBy) {
@@ -92,20 +110,23 @@ export default function CommunityAppsPage() {
   return (
     <section className={styles.page}>
       <div className={styles.toolbar}>
-        <div className={styles.filters} aria-label="Filter by platform">
-          {platformOptions.map((platform) => (
-            <button
-              key={platform}
-              type="button"
-              className={
-                platform === selectedPlatform
-                  ? styles.filterButtonActive
-                  : styles.filterButton
-              }
-              onClick={() => setSelectedPlatform(platform)}>
-              {platform}
-            </button>
-          ))}
+        <div className={styles.filterGroup}>
+          <div className={styles.filterLabel}>Platform</div>
+          <div className={styles.filters} aria-label="Filter by platform">
+            {platformOptions.map((platform) => (
+              <button
+                key={platform}
+                type="button"
+                className={
+                  platform === selectedPlatform
+                    ? styles.filterButtonActive
+                    : styles.filterButton
+                }
+                onClick={() => setSelectedPlatform(platform)}>
+                {platform}
+              </button>
+            ))}
+          </div>
         </div>
 
         <label className={styles.sortControl}>
@@ -121,6 +142,40 @@ export default function CommunityAppsPage() {
             ))}
           </select>
         </label>
+      </div>
+
+      <div className={styles.filterGroup}>
+        <div className={styles.filterLabel}>Media Types</div>
+        <div className={styles.filters} aria-label="Filter by media type">
+          <button
+            type="button"
+            className={
+              selectedTags.length === 0
+                ? styles.filterButtonActive
+                : styles.filterButton
+            }
+            onClick={() => setSelectedTags([])}>
+            All
+          </button>
+          {tagOptions.map((tag) => {
+            const active = selectedTags.includes(tag);
+            return (
+              <button
+                key={tag}
+                type="button"
+                className={active ? styles.filterButtonActive : styles.filterButton}
+                onClick={() =>
+                  setSelectedTags((current) =>
+                    current.includes(tag)
+                      ? current.filter((item) => item !== tag)
+                      : [...current, tag],
+                  )
+                }>
+                {tag}
+              </button>
+            );
+          })}
+        </div>
       </div>
 
       <div className={styles.grid}>
