@@ -2,9 +2,7 @@ import React from 'react';
 import {Icon} from '@iconify/react';
 
 import styles from './styles.module.css';
-import {
-  communityApps,
-} from './communityAppsData';
+import {communityApps} from './communityAppsData';
 
 function PlatformBadge({label}) {
   const icon =
@@ -32,19 +30,6 @@ function PlatformBadge({label}) {
   );
 }
 
-function ExternalLink({href, label, icon}) {
-  return (
-    <a
-      className={styles.actionLink}
-      href={href}
-      target="_blank"
-      rel="noreferrer">
-      <Icon icon={icon} aria-hidden="true" />
-      <span>{label}</span>
-    </a>
-  );
-}
-
 function AppCard({app}) {
   return (
     <article className={styles.card}>
@@ -63,19 +48,6 @@ function AppCard({app}) {
 
         <p className={styles.cardDescription}>{app.description}</p>
       </div>
-
-      <div className={styles.cardFooter}>
-        <div className={styles.actions}>
-          {app.links.map((link) => (
-            <ExternalLink
-              key={`${app.name}-${link.label}`}
-              href={link.href}
-              label={link.label}
-              icon={link.icon}
-            />
-          ))}
-        </div>
-      </div>
     </article>
   );
 }
@@ -83,7 +55,6 @@ function AppCard({app}) {
 export default function CommunityAppsPage() {
   return (
     <section className={styles.page}>
-
       <div className={styles.grid}>
         {communityApps.map((app) => (
           <AppCard key={app.name} app={app} />

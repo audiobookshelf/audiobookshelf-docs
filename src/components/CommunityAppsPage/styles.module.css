@@ -1,5 +1,3 @@
-/* Page wrapper:
-   Keeps the card grid centered and gives it some breathing room. */
 .page {
   display: flex;
   flex-direction: column;
@@ -7,17 +5,12 @@
   padding-bottom: 2rem;
 }
 
-/* Main card grid:
-   This is the layout rule that is still important. Everything else below is
-   just styling for the card contents. */
 .grid {
   display: grid;
   gap: 1rem;
   grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
 }
 
-/* Card shell:
-   Basic bordered box styling. No custom color accents are used anymore. */
 .card {
   display: flex;
   flex-direction: column;
@@ -33,8 +26,6 @@
   border-color: var(--ifm-color-emphasis-300);
 }
 
-/* Header section inside each card:
-   Keeps the platform badges, title, and summary spaced consistently. */
 .cardTop {
   display: flex;
   flex: 1 1 auto;
@@ -87,47 +78,6 @@
   margin: 0;
   color: var(--ifm-color-emphasis-700);
   line-height: 1.6;
-}
-
-/* Footer section:
-   Holds the main project link and any secondary links. */
-.cardFooter {
-  display: flex;
-  flex-direction: column;
-  gap: 0.75rem;
-  margin-top: 1rem;
-}
-
-
-.actions {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem;
-}
-
-.actionLink {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.35rem;
-  padding: 0.52rem 0.7rem;
-  border: 1px solid var(--ifm-color-emphasis-300);
-  border-radius: 0.7rem;
-  color: var(--ifm-color-emphasis-800);
-  font-size: 0.82rem;
-  font-weight: 600;
-  text-decoration: none;
-  background: var(--ifm-background-color);
-}
-
-.actionLink:hover {
-  border-color: var(--ifm-color-emphasis-500);
-  color: var(--ifm-color-emphasis-900);
-  text-decoration: none;
-}
-
-.actionLink svg {
-  width: 0.9rem;
-  height: 0.9rem;
 }
 
 @media (max-width: 996px) {
