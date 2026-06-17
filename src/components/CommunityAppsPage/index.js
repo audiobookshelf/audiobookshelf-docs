@@ -1,26 +1,29 @@
-import React from 'react';
+import React, {useMemo, useState} from 'react';
 import {Icon} from '@iconify/react';
 
 import styles from './styles.module.css';
 import {communityApps} from './communityAppsData';
 
+const sortOptions = [
+  {value: 'name-asc', label: 'Name A-Z'},
+  {value: 'name-desc', label: 'Name Z-A'},
+  {value: 'platforms-desc', label: 'Most platforms'},
+  {value: 'platforms-asc', label: 'Fewest platforms'},
+];
+
 function PlatformBadge({label}) {
-  const icon =
-    label === 'iOS' || label === 'iPadOS'
-      ? 'mdi:apple-ios'
-      : label === 'Android'
-        ? 'mdi:android'
-        : label === 'Wear OS'
-          ? 'mdi:watch-variant'
-          : label === 'Windows'
-            ? 'mdi:microsoft-windows'
-            : label === 'Linux'
-              ? 'mdi:linux'
-              : label === 'Web'
-                ? 'mdi:web'
-                : label === 'HarmonyOS'
-                  ? 'mdi:cellphone-link'
-                  : 'mdi:tag';
+  // If you need a new icon, add it to this mapping
+  const icons = {
+    iOS: 'mdi:apple-ios',
+    iPadOS: 'mdi:apple-ios',
+    Android: 'mdi:android',
+    'Wear OS': 'mdi:watch-variant',
+    Windows: 'mdi:microsoft-windows',
+    Linux: 'mdi:linux',
+    Web: 'mdi:web',
+    HarmonyOS: 'mdi:cellphone-link'
+  }
+  const icon = icons[label] ?? 'mdi:tag'
 
   return (
     <span className={styles.platformBadge}>
@@ -53,10 +56,75 @@ function AppCard({app}) {
 }
 
 export default function CommunityAppsPage() {
+  const platformOptions = useMemo(() => {
+    const platforms = new Set();
+
+    for (const app of communityApps) {
+      for (const platform of app.platforms) {
+        platforms.add(platform);
+      }
+    }
+
+    return ['All', ...Array.from(platforms).sort((a, b) => a.localeCompare(b))];
+  }, []);
+
+  const [selectedPlatform, setSelectedPlatform] = useState('All');
+  const [sortBy, setSortBy] = useState('name-asc');
+
+  const visibleApps = [...communityApps]
+    .filter((app) =>
+      selectedPlatform === 'All' ? true : app.platforms.includes(selectedPlatform),
+    )
+    .sort((a, b) => {
+      switch (sortBy) {
+        case 'name-desc':
+          return b.name.localeCompare(a.name);
+        case 'platforms-desc':
+          return b.platforms.length - a.platforms.length || a.name.localeCompare(b.name);
+        case 'platforms-asc':
+          return a.platforms.length - b.platforms.length || a.name.localeCompare(b.name);
+        case 'name-asc':
+        default:
+          return a.name.localeCompare(b.name);
+      }
+    });
+
   return (
     <section className={styles.page}>
+      <div className={styles.toolbar}>
+        <div className={styles.filters} aria-label="Filter by platform">
+          {platformOptions.map((platform) => (
+            <button
+              key={platform}
+              type="button"
+              className={
+                platform === selectedPlatform
+                  ? styles.filterButtonActive
+                  : styles.filterButton
+              }
+              onClick={() => setSelectedPlatform(platform)}>
+              {platform}
+            </button>
+          ))}
+        </div>
+
+        <label className={styles.sortControl}>
+          <span className={styles.sortLabel}>Sort</span>
+          <select
+            value={sortBy}
+            onChange={(event) => setSortBy(event.target.value)}
+            className={styles.sortSelect}>
+            {sortOptions.map((option) => (
+              <option key={option.value} value={option.value}>
+                {option.label}
+              </option>
+            ))}
+          </select>
+        </label>
+      </div>
+
       <div className={styles.grid}>
-        {communityApps.map((app) => (
+        {visibleApps.map((app) => (
           <AppCard key={app.name} app={app} />
         ))}
       </div>
