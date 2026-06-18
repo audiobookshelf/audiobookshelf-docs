@@ -6,7 +6,7 @@ sidebar_position: 2
 
 :::warning
 
-The following projects are not maintained by the Audiobookshelf team nor did any of the Audiobookshelf team member check them for security issues. **Use at your own risk.**
+The following projects are not maintained by the Audiobookshelf team nor did any of the Audiobookshelf team members check them for security issues. **Use at your own risk.**
 
 :::
 
