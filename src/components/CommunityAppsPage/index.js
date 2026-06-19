@@ -5,9 +5,9 @@ import styles from './styles.module.css';
 import {communityApps} from './communityAppsData';
 
 const mediaTypes = [
-  {label: 'Audiobooks', icon: 'mdi:book-open-page-variant'},
+  {label: 'Audiobooks', icon: 'simple-icons:audiobookshelf'},
   {label: 'Podcasts', icon: 'mdi:podcast'},
-  {label: 'Ebooks', icon: 'mdi:book-variant'},
+  {label: 'Ebooks', icon: 'tabler:book-filled'},
 ];
 const mediaTypeIcons = Object.fromEntries(
   mediaTypes.map(({label, icon}) => [label, icon]),
