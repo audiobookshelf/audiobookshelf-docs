@@ -95,7 +95,6 @@
 .platformBadge {
   display: inline-flex;
   align-items: center;
-  gap: 0.35rem;
   padding: 0.3rem 0.55rem;
   border: 1px solid var(--ifm-color-emphasis-200);
   border-radius: 999px;
@@ -105,11 +104,6 @@
   font-weight: 700;
   letter-spacing: 0.02em;
   text-transform: uppercase;
-}
-
-.platformBadge svg {
-  width: 0.85rem;
-  height: 0.85rem;
 }
 
 .cardTitle {

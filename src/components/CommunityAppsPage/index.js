@@ -6,52 +6,18 @@ import {communityApps} from './communityAppsData';
 
 const tagOptions = ['Audiobooks', 'Podcasts', 'Ebooks'];
 
-const platformIcons = {
-  Android: 'mdi:android',
-  AAOS: 'mdi:car',
-  iOS: 'mdi:apple-ios',
-  iPadOS: 'mdi:apple-ios',
-  HarmonyOS: 'mdi:cellphone-link',
-  'Wear OS': 'mdi:watch-variant',
-  Windows: 'mdi:microsoft-windows',
-  Linux: 'mdi:linux',
-  Web: 'mdi:web',
-};
-
-const platformOrder = Object.keys(platformIcons);
 const tagIcons = {
   Audiobooks: 'mdi:book-open-page-variant',
   Podcasts: 'mdi:podcast',
   Ebooks: 'mdi:book-variant',
 };
 
-function sortPlatforms(platforms) {
-  return [...platforms].sort((a, b) => {
-    const indexA = platformOrder.indexOf(a);
-    const indexB = platformOrder.indexOf(b);
-
-    if (indexA !== -1 && indexB !== -1) {
-      return indexA - indexB;
-    }
-    if (indexA !== -1) return -1;
-    if (indexB !== -1) return 1;
-    return a.localeCompare(b);
-  });
-}
-
 function PlatformBadge({label}) {
-  const icon = platformIcons[label] ?? 'mdi:tag';
-
-  return (
-    <span className={styles.platformBadge}>
-      <Icon icon={icon} aria-hidden="true" />
-      <span>{label}</span>
-    </span>
-  );
+  return <span className={styles.platformBadge}>{label}</span>;
 }
 
 function AppCard({app}) {
-  const sortedPlatforms = sortPlatforms(app.platforms);
+  const sortedPlatforms = [...app.platforms].sort((a, b) => a.localeCompare(b));
   const sortedTags = app.tags ?? [];
 
   return (
@@ -100,7 +66,7 @@ export default function CommunityAppsPage() {
       }
     }
 
-    return sortPlatforms(Array.from(platforms));
+    return Array.from(platforms).sort((a, b) => a.localeCompare(b));
   }, []);
 
   const [selectedPlatforms, setSelectedPlatforms] = useState([]);
