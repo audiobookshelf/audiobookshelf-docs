@@ -13,19 +13,36 @@ const sortOptions = [
 
 const tagOptions = ['Audiobooks', 'Podcasts', 'Ebooks'];
 
+const platformIcons = {
+  Android: 'mdi:android',
+  AAOS: 'mdi:car',
+  iOS: 'mdi:apple-ios',
+  iPadOS: 'mdi:apple-ios',
+  HarmonyOS: 'mdi:cellphone-link',
+  'Wear OS': 'mdi:watch-variant',
+  Windows: 'mdi:microsoft-windows',
+  Linux: 'mdi:linux',
+  Web: 'mdi:web',
+};
+
+const platformOrder = Object.keys(platformIcons);
+
+function sortPlatforms(platforms) {
+  return [...platforms].sort((a, b) => {
+    const indexA = platformOrder.indexOf(a);
+    const indexB = platformOrder.indexOf(b);
+
+    if (indexA !== -1 && indexB !== -1) {
+      return indexA - indexB;
+    }
+    if (indexA !== -1) return -1;
+    if (indexB !== -1) return 1;
+    return a.localeCompare(b);
+  });
+}
+
 function PlatformBadge({label}) {
-  // If you need a new icon, add it to this mapping
-  const icons = {
-    iOS: 'mdi:apple-ios',
-    iPadOS: 'mdi:apple-ios',
-    Android: 'mdi:android',
-    'Wear OS': 'mdi:watch-variant',
-    Windows: 'mdi:microsoft-windows',
-    Linux: 'mdi:linux',
-    Web: 'mdi:web',
-    HarmonyOS: 'mdi:cellphone-link'
-  }
-  const icon = icons[label] ?? 'mdi:tag'
+  const icon = platformIcons[label] ?? 'mdi:tag';
 
   return (
     <span className={styles.platformBadge}>
@@ -36,11 +53,13 @@ function PlatformBadge({label}) {
 }
 
 function AppCard({app}) {
+  const sortedPlatforms = sortPlatforms(app.platforms);
+
   return (
     <article className={styles.card}>
       <div className={styles.cardTop}>
         <div className={styles.platformRow}>
-          {app.platforms.map((platform) => (
+          {sortedPlatforms.map((platform) => (
             <PlatformBadge key={platform} label={platform} />
           ))}
         </div>
@@ -77,21 +96,23 @@ export default function CommunityAppsPage() {
       }
     }
 
-    return ['All', ...Array.from(platforms).sort((a, b) => a.localeCompare(b))];
+    return sortPlatforms(Array.from(platforms));
   }, []);
 
-  const [selectedPlatform, setSelectedPlatform] = useState('All');
+  const [selectedPlatforms, setSelectedPlatforms] = useState([]);
   const [selectedTags, setSelectedTags] = useState([]);
   const [sortBy, setSortBy] = useState('name-asc');
 
   const visibleApps = [...communityApps]
     .filter((app) =>
-      selectedPlatform === 'All' ? true : app.platforms.includes(selectedPlatform),
+      selectedPlatforms.length === 0
+        ? true
+        : selectedPlatforms.every((platform) => app.platforms.includes(platform)),
     )
     .filter((app) =>
       selectedTags.length === 0
         ? true
-        : selectedTags.some((tag) => app.tags?.includes(tag)),
+        : selectedTags.every((tag) => app.tags?.includes(tag)),
     )
     .sort((a, b) => {
       switch (sortBy) {
@@ -113,19 +134,34 @@ export default function CommunityAppsPage() {
         <div className={styles.filterGroup}>
           <div className={styles.filterLabel}>Platform</div>
           <div className={styles.filters} aria-label="Filter by platform">
-            {platformOptions.map((platform) => (
-              <button
-                key={platform}
-                type="button"
-                className={
-                  platform === selectedPlatform
-                    ? styles.filterButtonActive
-                    : styles.filterButton
-                }
-                onClick={() => setSelectedPlatform(platform)}>
-                {platform}
-              </button>
-            ))}
+            <button
+              type="button"
+              className={
+                selectedPlatforms.length === 0
+                  ? styles.filterButtonActive
+                  : styles.filterButton
+              }
+              onClick={() => setSelectedPlatforms([])}>
+              All
+            </button>
+            {platformOptions.map((platform) => {
+              const active = selectedPlatforms.includes(platform);
+              return (
+                <button
+                  key={platform}
+                  type="button"
+                  className={active ? styles.filterButtonActive : styles.filterButton}
+                  onClick={() =>
+                    setSelectedPlatforms((current) =>
+                      current.includes(platform)
+                        ? current.filter((item) => item !== platform)
+                        : [...current, platform],
+                    )
+                  }>
+                  {platform}
+                </button>
+              );
+            })}
           </div>
         </div>
 

@@ -54,11 +54,11 @@ export const communityApps = [
   },
   {
     name: 'yaabsa',
-    platforms: ['Android', 'Windows', 'Linux', 'Web'],
+    platforms: ['Android', 'AAOS', 'Windows', 'Linux', 'Web', 'iOS', 'iPadOS'],
     href: 'https://github.com/Vito0912/yaabsa/',
     tags: ['Audiobooks', 'Podcasts', 'Ebooks'],
     description:
-      'A feature-rich cross-platform Audiobookshelf client with support for audiobooks, podcasts, caching, and more.',
+      'A responsive mobile, desktop and car client, supporting audiobooks, podcasts and ebooks.',
   },
   {
     name: 'Harmshelf',
