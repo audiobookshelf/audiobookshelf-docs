@@ -4,13 +4,6 @@ import {Icon} from '@iconify/react';
 import styles from './styles.module.css';
 import {communityApps} from './communityAppsData';
 
-const sortOptions = [
-  {value: 'name-asc', label: 'Name A-Z'},
-  {value: 'name-desc', label: 'Name Z-A'},
-  {value: 'platforms-desc', label: 'Most platforms'},
-  {value: 'platforms-asc', label: 'Fewest platforms'},
-];
-
 const tagOptions = ['Audiobooks', 'Podcasts', 'Ebooks'];
 
 const platformIcons = {
@@ -101,7 +94,6 @@ export default function CommunityAppsPage() {
 
   const [selectedPlatforms, setSelectedPlatforms] = useState([]);
   const [selectedTags, setSelectedTags] = useState([]);
-  const [sortBy, setSortBy] = useState('name-asc');
 
   const visibleApps = [...communityApps]
     .filter((app) =>
@@ -114,19 +106,7 @@ export default function CommunityAppsPage() {
         ? true
         : selectedTags.every((tag) => app.tags?.includes(tag)),
     )
-    .sort((a, b) => {
-      switch (sortBy) {
-        case 'name-desc':
-          return b.name.localeCompare(a.name);
-        case 'platforms-desc':
-          return b.platforms.length - a.platforms.length || a.name.localeCompare(b.name);
-        case 'platforms-asc':
-          return a.platforms.length - b.platforms.length || a.name.localeCompare(b.name);
-        case 'name-asc':
-        default:
-          return a.name.localeCompare(b.name);
-      }
-    });
+    .sort((a, b) => a.name.localeCompare(b.name));
 
   return (
     <section className={styles.page}>
@@ -165,19 +145,6 @@ export default function CommunityAppsPage() {
           </div>
         </div>
 
-        <label className={styles.sortControl}>
-          <span className={styles.sortLabel}>Sort</span>
-          <select
-            value={sortBy}
-            onChange={(event) => setSortBy(event.target.value)}
-            className={styles.sortSelect}>
-            {sortOptions.map((option) => (
-              <option key={option.value} value={option.value}>
-                {option.label}
-              </option>
-            ))}
-          </select>
-        </label>
       </div>
 
       <div className={styles.filterGroup}>
