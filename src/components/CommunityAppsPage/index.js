@@ -13,10 +13,6 @@ const mediaTypeIcons = Object.fromEntries(
   mediaTypes.map(({label, icon}) => [label, icon]),
 );
 
-function PlatformBadge({label}) {
-  return <span className={styles.platformBadge}>{label}</span>;
-}
-
 function AppCard({app}) {
   const sortedPlatforms = [...app.platforms].sort((a, b) => a.localeCompare(b));
   const sortedTags = app.tags ?? [];
@@ -49,7 +45,7 @@ function AppCard({app}) {
       <div className={styles.cardBottom}>
         <div className={styles.platformRow} aria-label={`${app.name} platforms`}>
           {sortedPlatforms.map((platform) => (
-            <PlatformBadge key={platform} label={platform} />
+            <span className={styles.platformBadge}>{platform}</span>
           ))}
         </div>
       </div>
