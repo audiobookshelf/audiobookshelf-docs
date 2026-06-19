@@ -1,22 +1,35 @@
-The Android app supports local event history to more easily get back to where you were listening if the audio seeks incorrectly and to help debug sync issues.
+---
+id: listen-history
+title: Listen History
+sidebar_position: 3
+---
 
-To access the listen history, you can use the 3-dot menu on a library item and then select the "History" option.
+Listen history shows the local playback events recorded by the Android app. It can help you recover your place if playback jumps unexpectedly and can also be useful when troubleshooting sync issues.
+
+## Open Listen History
+
+Open the three-dot menu on a library item and select `History`.
 
 ![History menu option](/pages/app_listen_history/history_menu.png)
 
-Each row of the listening history contains the following local events:
-- The real time of the event
-- What event was recorded
-- The time position in the book (not scaled by playback speed)
-- A "sync status" indicator if the event should sync with the server
+## What It Shows
 
-The types of events are:
-- Play
-- Pause (will save progress to server)
-- Save (will save progress to server)
-- Seek
-- Sync (get progress from server)
+Each row in listen history includes:
 
-Every event is reported on its own line, with the exception of `Save` events due to the high frequency of events compared to other event types. The `Save` event will indicate how many events were collapsed to the same entry.
+- The time the event occurred
+- The type of event that was recorded
+- The position in the book at that moment
+- A sync status indicator, when the event should sync with the server
+
+The sync status indicator is a green cloud when successful, and a red exclamation when not successful. Unsuccessful syncs just mean the server does not have the latest listen position, but is still stored locally.
+
+The app records the following event types: `Play`, `Pause`, `Save`, `Seek`, and `Sync`.
+
+Most events appear on their own line. `Save` events are collapsed because they happen more often than the others, and the row shows how many events were grouped together.
 
 ![History](/pages/app_listen_history/history.png)
+
+## Jumping to previous time
+Each event row includes the book timestamp. You can tap on the timestamp to jump to that position, such as accidentally seeking to another location or chapter, or if the server syncs and overwrites the local progress.
+
+![History seek](/pages/app_listen_history/history_seek.png)

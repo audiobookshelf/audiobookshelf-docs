@@ -1,7 +1,7 @@
 ---
 id: shared-storage
 title: Shared Storage
-sidebar_position: 1
+sidebar_position: 2
 ---
 
 This page describes how to download books from your server onto an Android device and make them available to other apps.
