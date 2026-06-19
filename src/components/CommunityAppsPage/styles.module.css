@@ -82,6 +82,10 @@
   gap: 0.75rem;
 }
 
+.cardBottom {
+  margin-top: 1rem;
+}
+
 .platformRow {
   display: flex;
   flex-wrap: wrap;
@@ -112,33 +116,39 @@
   margin: 0;
   font-size: 1.2rem;
   line-height: 1.2;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.titleTagRow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  flex-shrink: 0;
+}
+
+.titleTagIcon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.35rem;
+  height: 1.35rem;
+  border: 1px solid var(--ifm-color-emphasis-200);
+  border-radius: 999px;
+  background: var(--ifm-color-emphasis-100);
+  color: var(--ifm-color-emphasis-700);
+}
+
+.titleTagIcon svg {
+  width: 0.85rem;
+  height: 0.85rem;
 }
 
 .cardDescription {
   margin: 0;
   color: var(--ifm-color-emphasis-700);
   line-height: 1.6;
-}
-
-.tagRow {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.4rem;
-  margin-top: 0.25rem;
-}
-
-.tagBadge {
-  display: inline-flex;
-  align-items: center;
-  padding: 0.24rem 0.5rem;
-  border: 1px solid var(--ifm-color-emphasis-200);
-  border-radius: 999px;
-  background: var(--ifm-color-emphasis-100);
-  color: var(--ifm-color-emphasis-700);
-  font-size: 0.7rem;
-  font-weight: 700;
-  letter-spacing: 0.02em;
-  text-transform: uppercase;
 }
 
 @media (max-width: 996px) {

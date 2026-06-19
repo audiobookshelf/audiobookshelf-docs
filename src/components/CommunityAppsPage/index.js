@@ -19,6 +19,11 @@ const platformIcons = {
 };
 
 const platformOrder = Object.keys(platformIcons);
+const tagIcons = {
+  Audiobooks: 'mdi:book-open-page-variant',
+  Podcasts: 'mdi:podcast',
+  Ebooks: 'mdi:book-variant',
+};
 
 function sortPlatforms(platforms) {
   return [...platforms].sort((a, b) => {
@@ -47,6 +52,7 @@ function PlatformBadge({label}) {
 
 function AppCard({app}) {
   const sortedPlatforms = sortPlatforms(app.platforms);
+  const sortedTags = app.tags ?? [];
 
   return (
     <a
@@ -55,27 +61,30 @@ function AppCard({app}) {
       target="_blank"
       rel="noreferrer">
       <div className={styles.cardTop}>
-        <div className={styles.platformRow}>
+        <h2 className={styles.cardTitle}>
+          <span>{app.name}</span>
+          {sortedTags.length ? (
+            <span
+              className={styles.titleTagRow}
+              aria-label={`${app.name} media types`}>
+              {sortedTags.map((tag) => (
+                <span key={tag} className={styles.titleTagIcon} title={tag}>
+                  <Icon icon={tagIcons[tag] ?? 'mdi:tag'} aria-hidden="true" />
+                </span>
+              ))}
+            </span>
+          ) : null}
+        </h2>
+
+        <p className={styles.cardDescription}>{app.description}</p>
+      </div>
+
+      <div className={styles.cardBottom}>
+        <div className={styles.platformRow} aria-label={`${app.name} platforms`}>
           {sortedPlatforms.map((platform) => (
             <PlatformBadge key={platform} label={platform} />
           ))}
         </div>
-
-        <h2 className={styles.cardTitle}>
-          {app.name}
-        </h2>
-
-        <p className={styles.cardDescription}>{app.description}</p>
-
-        {app.tags?.length ? (
-          <div className={styles.tagRow} aria-label={`${app.name} tags`}>
-            {app.tags.map((tag) => (
-              <span key={tag} className={styles.tagBadge}>
-                {tag}
-              </span>
-            ))}
-          </div>
-        ) : null}
       </div>
     </a>
   );
