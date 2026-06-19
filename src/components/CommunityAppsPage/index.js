@@ -49,7 +49,11 @@ function AppCard({app}) {
   const sortedPlatforms = sortPlatforms(app.platforms);
 
   return (
-    <article className={styles.card}>
+    <a
+      className={styles.card}
+      href={app.href}
+      target="_blank"
+      rel="noreferrer">
       <div className={styles.cardTop}>
         <div className={styles.platformRow}>
           {sortedPlatforms.map((platform) => (
@@ -58,9 +62,7 @@ function AppCard({app}) {
         </div>
 
         <h2 className={styles.cardTitle}>
-          <a href={app.href} target="_blank" rel="noreferrer">
-            {app.name}
-          </a>
+          {app.name}
         </h2>
 
         <p className={styles.cardDescription}>{app.description}</p>
@@ -75,7 +77,7 @@ function AppCard({app}) {
           </div>
         ) : null}
       </div>
-    </article>
+    </a>
   );
 }
 
