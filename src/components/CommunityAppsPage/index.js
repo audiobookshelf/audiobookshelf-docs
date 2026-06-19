@@ -4,13 +4,14 @@ import {Icon} from '@iconify/react';
 import styles from './styles.module.css';
 import {communityApps} from './communityAppsData';
 
-const tagOptions = ['Audiobooks', 'Podcasts', 'Ebooks'];
-
-const tagIcons = {
-  Audiobooks: 'mdi:book-open-page-variant',
-  Podcasts: 'mdi:podcast',
-  Ebooks: 'mdi:book-variant',
-};
+const mediaTypes = [
+  {label: 'Audiobooks', icon: 'mdi:book-open-page-variant'},
+  {label: 'Podcasts', icon: 'mdi:podcast'},
+  {label: 'Ebooks', icon: 'mdi:book-variant'},
+];
+const mediaTypeIcons = Object.fromEntries(
+  mediaTypes.map(({label, icon}) => [label, icon]),
+);
 
 function PlatformBadge({label}) {
   return <span className={styles.platformBadge}>{label}</span>;
@@ -35,7 +36,7 @@ function AppCard({app}) {
               aria-label={`${app.name} media types`}>
               {sortedTags.map((tag) => (
                 <span key={tag} className={styles.titleTagIcon} title={tag}>
-                  <Icon icon={tagIcons[tag] ?? 'mdi:tag'} aria-hidden="true" />
+                  <Icon icon={mediaTypeIcons[tag]} aria-hidden="true" />
                 </span>
               ))}
             </span>
@@ -137,21 +138,22 @@ export default function CommunityAppsPage() {
             onClick={() => setSelectedTags([])}>
             All
           </button>
-          {tagOptions.map((tag) => {
-            const active = selectedTags.includes(tag);
+          {mediaTypes.map((mediaType) => {
+            const active = selectedTags.includes(mediaType.label);
             return (
               <button
-                key={tag}
+                key={mediaType.label}
                 type="button"
                 className={active ? styles.filterButtonActive : styles.filterButton}
                 onClick={() =>
                   setSelectedTags((current) =>
-                    current.includes(tag)
-                      ? current.filter((item) => item !== tag)
-                      : [...current, tag],
+                    current.includes(mediaType.label)
+                      ? current.filter((item) => item !== mediaType.label)
+                      : [...current, mediaType.label],
                   )
                 }>
-                {tag}
+                <Icon icon={mediaType.icon} aria-hidden="true" />
+                <span>{mediaType.label}</span>
               </button>
             );
           })}

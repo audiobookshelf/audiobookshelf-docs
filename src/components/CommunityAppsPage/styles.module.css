@@ -35,6 +35,9 @@
 
 .filterButton,
 .filterButtonActive {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
   padding: 0.45rem 0.75rem;
   border: 1px solid var(--ifm-color-emphasis-300);
   border-radius: 999px;
@@ -48,6 +51,12 @@
   border-color: var(--ifm-color-primary);
   background: var(--ifm-color-primary);
   color: white;
+}
+
+.filterButton svg,
+.filterButtonActive svg {
+  width: 0.9rem;
+  height: 0.9rem;
 }
 
 .grid {
