@@ -47,7 +47,7 @@ const config = {
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
-            "https://github.com/audiobookshelf/audiobookshelf-docs/",
+            "https://github.com/audiobookshelf/audiobookshelf-docs/tree/master/",
         },
         theme: {
           customCss: "./src/css/custom.css",
@@ -120,6 +120,11 @@ const config = {
       prism: {
         theme: prismThemes.github,
         darkTheme: prismThemes.dracula,
+      },
+      colorMode: {
+        defaultMode: "dark",
+        disableSwitch: false,
+        respectPrefersColorScheme: false,
       },
     }),
 };
