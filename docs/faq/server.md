@@ -40,8 +40,36 @@ Note that ABS has some outstanding issues with seeking within very long mp3 file
 M4B is convenient if you want to have 1 file per book.
 This file format is supported on a number of devices, but does not have as good of support as mp3.
 Most phones and web browsers shouldn't have any problems.
+If you have issues playing or adding a m4b file to ABS, please check [xHE-AAC Codec Support](#xhe-aac-codec-support) below to see if your m4b file is using an unsupported codec.
 
 Opus is another common codec that is used to retain comparable quality at much lower bitrates, reducing storage space and bandwidth usage when streaming. Apple has now added opus support to iOS so this should be able to play on most iOS devices without needing to transcode.
+
+## xHE-AAC Codec Support
+
+Some M4B files use the **xHE-AAC** codec, which is not supported by FFmpeg 7 or lower. Because Audiobookshelf relies on FFmpeg and FFprobe to parse audiobooks, scanning these files will fail. The docker version of Audiobookshelf is the only installation method which includes FFmpeg 8, but the default xHE-AAC decoder is still not very good so the audio may sound distorted when transcoding during playback. You can build FFmpeg yourself to use other decoders.
+
+:::info
+
+On FFmpeg 7 or lower, scanning an xHE-AAC file will trigger this log error:
+
+```text
+[AudioFileScanner] SyntaxError: Expected property name or '}' in JSON at position 2 ...
+```
+
+:::
+
+You can fix this by:
+
+- **1 (Easiest): Re-encode the file**\
+  Use an external tool which supports xHE-ACC such as `foobar2000` or FFmpeg (with `fdk-aac`) to convert the audiobook to a standard, widely supported codec like **AAC** or **Opus** before adding it to ABS.
+- **2 (Advanced): Use custom binaries**\
+  Compile your own `ffmpeg` and `ffprobe` binaries with `fdk-aac` support and set ABS to [use your binaries](../documentation/install/configuration).
+
+:::info
+
+Distributing a pre-built binary of `ffmpeg` with `fdk-aac` is not allowed due to licensing differences. If you want to use the `fdk-aac` decoder you must build it yourself.
+
+:::
 
 ## I'm still confused about what Docker and containers are and how they work?
 
@@ -81,3 +109,11 @@ NOTE: make sure the server is not running when you are manually editing the SQLi
 
 In the `users` table find the root user row and update the `pash` column to NULL.
 This will allow you to log in as the root user with a blank password and you can set a new password after logging in.
+
+## Why do I need to set up my own remote access?
+
+Audiobookshelf does not provide built-in remote access. [Like most self-hosted applications](https://github.com/awesome-selfhosted/awesome-selfhosted), it is designed to run on your local network. To access it when away from home, you must set up your own VPN or reverse proxy.
+
+VPNs and reverse proxies are standard, well-tested solutions for secure remote access. A reverse proxy can provide HTTPS, manage SSL/TLS certificates, and securely expose multiple self-hosted services through a single entry point. A VPN uses a secure connection to allow a device to act as if it is on another network.
+
+Audiobookshelf serves unencrypted HTTP. This keeps encryption and certificate management in dedicated software designed specifically for those tasks.
