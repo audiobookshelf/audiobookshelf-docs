@@ -65,6 +65,8 @@ Make sure you set up OIDC correctly and test it before turning off local authent
 
 :::
 
+To authorize third-party mobile apps via OAuth, add the app's redirect URI to the **Allowed Mobile Redirect URIs** field in Audiobookshelf (there is no need to add this to your OIDC provider). Most apps use the format `<appname>://oauth`. If you don't know your app's specific URI, check its documentation or contact the developer.
+
 ## User Management
 
 ### Existing Users
@@ -83,6 +85,10 @@ If you see "Unauthorized" errors when logging in with Authentik, check that the 
 
 :::
 
+### Auto Register
+
+When **Auto Register** is enabled, OIDC logins that do not match any existing users (via the Match existing users by criteria) will automatically trigger the creation and linking of a new user account.
+
 ### Bypassing OIDC Login
 
 If OIDC is misconfigured or unavailable, you can bypass SSO by navigating directly to. This will bring you to the local login page (if still enabled):
@@ -92,6 +98,7 @@ https://example.com/login/?autoLaunch=0
 ```
 
 If you have disabled the local login and are unable to log in using OIDC, you will need to manually modify the database to reenable local login. Make sure to make a backup of the database before modification. The setting is found under:
+
 - Table: `settings`
 - Row: `server-settings`
 - Key: `"authActiveAuthMethods"`
