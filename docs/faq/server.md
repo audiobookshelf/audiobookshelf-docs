@@ -48,18 +48,22 @@ Opus is another common codec that is used to retain comparable quality at much l
 
 Some M4B files use the **xHE-AAC** codec, which is not supported by FFmpeg 7 or lower. Because Audiobookshelf relies on FFmpeg and FFprobe to parse audiobooks, scanning these files will fail. The docker version of Audiobookshelf is the only installation method which includes FFmpeg 8, but the default xHE-AAC decoder is still not very good so the audio may sound distorted when transcoding during playback. You can build FFmpeg yourself to use other decoders.
 
-> On FFmpeg 7 or lower, scanning an xHE-AAC file will trigger this log error:
->
-> ```text
-> [AudioFileScanner] SyntaxError: Expected property name or '}' in JSON at position 2 ...
-> ```
+:::info
+
+On FFmpeg 7 or lower, scanning an xHE-AAC file will trigger this log error:
+
+```text
+[AudioFileScanner] SyntaxError: Expected property name or '}' in JSON at position 2 ...
+```
+
+:::
 
 You can fix this by:
 
 - **1 (Easiest): Re-encode the file**\
   Use an external tool which supports xHE-ACC such as `foobar2000` or FFmpeg (with `fdk-aac`) to convert the audiobook to a standard, widely supported codec like **AAC** or **Opus** before adding it to ABS.
 - **2 (Advanced): Use custom binaries**\
-  Compile your own `ffmpeg` and `ffprobe` binaries with `fdk-aac` support and set ABS to [use your binaries](/docs/documentation/install/11.env-configuration).
+  Compile your own `ffmpeg` and `ffprobe` binaries with `fdk-aac` support and set ABS to [use your binaries](../documentation/install/11.env-configuration).
 
 :::info
 
