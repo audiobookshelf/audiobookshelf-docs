@@ -46,23 +46,26 @@ Opus is another common codec that is used to retain comparable quality at much l
 
 ## xHE-AAC Codec Support
 
-Some M4B files use the **xHE-AAC** codec, which is not supported by FFmpeg 7 or lower. Because Audiobookshelf relies on FFmpeg and FFprobe to parse audiobooks, scanning these files will fail.
-
-Only the Docker version of ABS includes FFmpeg 8, which can read xHE-AAC. However, because major web browsers do not natively support this codec, ABS must transcode it on the fly. FFmpeg 8 default decoder handles this poorly, which can make the audio sound robotic, distorted, or artificially sped up.
+Some M4B files use the **xHE-AAC** codec, which is not supported by FFmpeg 7 or lower. Because Audiobookshelf relies on FFmpeg and FFprobe to parse audiobooks, scanning these files will fail. The docker version of Audiobookshelf is the only installation method which includes FFmpeg 8, but the default xHE-AAC decoder is still not very good so the audio may sound distorted when transcoding during playback. You can build FFmpeg yourself to use other decoders.
 
 > On FFmpeg 7 or lower, scanning an xHE-AAC file will trigger this log error:
 >
 > ```text
 > [AudioFileScanner] SyntaxError: Expected property name or '}' in JSON at position 2 ...
->
 > ```
 
-You can fix this:
+You can fix this by:
 
 - **1 (Easiest): Re-encode the file**\
-  Use an external tool like `foobar2000` or a local copy of FFmpeg to convert the audiobook to a standard, widely supported codec like **AAC** or **Opus** before adding it to ABS. Note that the used software must support xHE-AAC.
+  Use an external tool which supports xHE-ACC such as `foobar2000` or FFmpeg (with `fdk-aac`) to convert the audiobook to a standard, widely supported codec like **AAC** or **Opus** before adding it to ABS.
 - **2 (Advanced): Use custom binaries**\
-  Compile your own `ffmpeg` and `ffprobe` binaries with `fdk-aac` support (required for high-quality xHE-AAC decoding but excluded from pre-built releases due to licensing). Point ABS to these files and set the environment variable `SKIP_BINARIES_CHECK=1`. See the [Environment Configuration documentation](/docs/documentation/install/11.env-configuration).
+  Compile your own `ffmpeg` and `ffprobe` binaries with `fdk-aac` support and set ABS to [use your binaries](/docs/documentation/install/11.env-configuration).
+
+:::info
+
+Distributing a pre-built binary of `ffmpeg` with `fdk-aac` is not allowed due to licensing differences. If you want to use the `fdk-aac` decoder you must build it yourself.
+
+:::
 
 ## I'm still confused about what Docker and containers are and how they work?
 
