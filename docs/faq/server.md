@@ -40,8 +40,29 @@ Note that ABS has some outstanding issues with seeking within very long mp3 file
 M4B is convenient if you want to have 1 file per book.
 This file format is supported on a number of devices, but does not have as good of support as mp3.
 Most phones and web browsers shouldn't have any problems.
+If you have issues playing or adding a m4b file to ABS, please check [xHE-AAC Codec Support](#xhe-aac-codec-support) below to see if your m4b file is using an unsupported codec.
 
 Opus is another common codec that is used to retain comparable quality at much lower bitrates, reducing storage space and bandwidth usage when streaming. Apple has now added opus support to iOS so this should be able to play on most iOS devices without needing to transcode.
+
+## xHE-AAC Codec Support
+
+Some M4B files use the **xHE-AAC** codec, which is not supported by FFmpeg 7 or lower. Because Audiobookshelf relies on FFmpeg and FFprobe to parse audiobooks, scanning these files will fail.
+
+Only the Docker version of ABS includes FFmpeg 8, which can read xHE-AAC. However, because major web browsers do not natively support this codec, ABS must transcode it on the fly. FFmpeg 8 default decoder handles this poorly, which can make the audio sound robotic, distorted, or artificially sped up.
+
+> On FFmpeg 7 or lower, scanning an xHE-AAC file will trigger this log error:
+>
+> ```text
+> [AudioFileScanner] SyntaxError: Expected property name or '}' in JSON at position 2 ...
+>
+> ```
+
+You can fix this:
+
+- **1 (Easiest): Re-encode the file**\
+  Use an external tool like `foobar2000` or a local copy of FFmpeg to convert the audiobook to a standard, widely supported codec like **AAC** or **Opus** before adding it to ABS. Note that the used software must support xHE-AAC.
+- **2 (Advanced): Use custom binaries**\
+  Compile your own `ffmpeg` and `ffprobe` binaries with `fdk-aac` support (required for high-quality xHE-AAC decoding but excluded from pre-built releases due to licensing). Point ABS to these files and set the environment variable `SKIP_BINARIES_CHECK=1`. See the [Environment Configuration documentation](/docs/documentation/install/11.env-configuration).
 
 ## I'm still confused about what Docker and containers are and how they work?
 
