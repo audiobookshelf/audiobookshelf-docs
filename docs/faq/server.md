@@ -63,7 +63,7 @@ You can fix this by:
 - **1 (Easiest): Re-encode the file**\
   Use an external tool which supports xHE-ACC such as `foobar2000` or FFmpeg (with `fdk-aac`) to convert the audiobook to a standard, widely supported codec like **AAC** or **Opus** before adding it to ABS.
 - **2 (Advanced): Use custom binaries**\
-  Compile your own `ffmpeg` and `ffprobe` binaries with `fdk-aac` support and set ABS to [use your binaries](../documentation/install/11.env-configuration).
+  Compile your own `ffmpeg` and `ffprobe` binaries with `fdk-aac` support and set ABS to [use your binaries](../documentation/install/configuration).
 
 :::info
 

@@ -16,20 +16,6 @@ Another list of tools can be found at [ABS Toolbox - Projects](https://abstoolbo
 
 ---
 
-<!---
-
-## [Project name](https://github.com/yourusername/projectname)
-
-Short description of the project
-
-:::info
-
-A note to the project that is important to know.
-
-:::
-
--->
-
 ## [absToolbox](https://github.com/vito0912/absToolbox)
 
 A collection of tools designed to assist with Audiobookshelf-related tasks. Please make a backup before using any of these tools.

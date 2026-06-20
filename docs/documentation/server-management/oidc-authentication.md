@@ -79,7 +79,7 @@ If you are using an OIDC provider like Authentik, you do not need to change the 
 
 :::
 
-:::info Unauthorized when using Authentik
+:::info[Unauthorized when using Authentik]
 
 If you see "Unauthorized" errors when logging in with Authentik, check that the user's email is verified. For instructions, refer to the [Authentik documentation](https://docs.goauthentik.io/add-secure-apps/providers/property-mappings/#scope-mappings-with-oauth2). You can also follow the step-by-step guide in [Issue #150](https://github.com/audiobookshelf/audiobookshelf-web/issues/150).
 

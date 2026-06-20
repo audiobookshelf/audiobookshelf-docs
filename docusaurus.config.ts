@@ -27,7 +27,11 @@ const config = {
   baseUrl: "/",
 
   onBrokenLinks: "throw",
-  onBrokenMarkdownLinks: "warn",
+  markdown: {
+    hooks: {
+      onBrokenMarkdownLinks: "warn",
+    },
+  },
 
   // Even if you don't use internationalization, you can use this field to set
   // useful metadata like html lang. For example, if your site is Chinese, you
@@ -41,7 +45,7 @@ const config = {
     [
       "classic",
       /** @type {import('@docusaurus/preset-classic').Options} */
-      ({
+      {
         docs: {
           sidebarPath: "./sidebars.js",
           // Please change this to your repo.
@@ -52,13 +56,13 @@ const config = {
         theme: {
           customCss: "./src/css/custom.css",
         },
-      }),
+      },
     ],
   ],
 
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
-    ({
+    {
       // Replace with your project's social card
       image: "img/Logo.png",
       navbar: {
@@ -126,8 +130,7 @@ const config = {
         disableSwitch: false,
         respectPrefersColorScheme: false,
       },
-    }),
+    },
 };
 
 export default config;
-
