@@ -87,7 +87,7 @@ If you see "Unauthorized" errors when logging in with Authentik, check that the 
 
 ### Auto Register
 
-When **Auto Register** is enabled, OIDC logins that do not match any existing users (via the Match existing users by criteria) will automatically trigger the creation and linking of a new user account.
+When **Auto Register** is enabled, OIDC logins that do not match any existing users (via the Match existing users by criteria) will automatically trigger the creation and linking of a new user account within ABS.
 
 ### Bypassing OIDC Login
 
