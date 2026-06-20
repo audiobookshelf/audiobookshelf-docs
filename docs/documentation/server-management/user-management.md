@@ -30,4 +30,10 @@ Users can also be disabled to retain the user account but prevent authentication
 
 User access can be limited by library and tags. When limiting access by tags, users can be given access only to certain tags, or everything except for certain tags. The `Invert` toggle allows this behavior to switch between `Tags Accessible to User` and `Tags not Accessible to User`. Tag access control applies to all libraries a user can access.
 
+:::info
+
+Due to the existing data model, users with tag-based access control may experience performance issues with larger libraries.
+
+:::
+
 ![Limiting access](/pages/users/user_limiting_access.png)
