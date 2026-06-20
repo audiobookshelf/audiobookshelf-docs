@@ -105,3 +105,11 @@ NOTE: make sure the server is not running when you are manually editing the SQLi
 
 In the `users` table find the root user row and update the `pash` column to NULL.
 This will allow you to log in as the root user with a blank password and you can set a new password after logging in.
+
+## Why do I need to set up my own remote access?
+
+Audiobookshelf does not provide built-in remote access. [Like most self-hosted applications](https://github.com/awesome-selfhosted/awesome-selfhosted), it is designed to run on your local network. To access it when away from home, you must set up your own VPN or reverse proxy.
+
+VPNs and reverse proxies are standard, well-tested solutions for secure remote access. A reverse proxy can provide HTTPS, manage SSL/TLS certificates, and securely expose multiple self-hosted services through a single entry point. A VPN uses a secure connection to allow a device to act as if it is on another network.
+
+Audiobookshelf serves unencrypted HTTP. This keeps encryption and certificate management in dedicated software designed specifically for those tasks.
