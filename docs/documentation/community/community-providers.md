@@ -39,6 +39,7 @@ If you have made a custom provider and want to share, you can [open a PR for thi
 | abs-opds         | https://github.com/DeXP/abs-opds                   | OPDS books catalog (biggest Russian: Flibusta, inxp-web) Note: does not provide syncing reading progress                                                  |
 | Abs-Ximalaya     | https://github.com/shanyan-wcx/Abs-Ximalaya        | Provides Ximalaya (喜马拉雅) metadata                                                                                                                     |
 | abs-ranobedb     | https://github.com/kennethsible/abs-ranobedb       | Provides RanobeDB metadata for Japanese light novels                                                                            |
+| abs-czech-metadata  | https://github.com/stecik/audiobookshelf_czech_metadata      | Provides Czech metadata from many sources (Audiolibrix, Audioteka and more)                                                     ||
 
 ## Community hosted providers
 
