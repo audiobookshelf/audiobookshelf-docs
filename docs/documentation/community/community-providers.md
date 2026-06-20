@@ -4,7 +4,7 @@ title: Metadata Providers
 sidebar_position: 3
 ---
 
-Custom book metadata providers can be added to your Audiobookshelf server through the "Metadata Tools" in the server settings.
+Custom book metadata providers can be added to your Audiobookshelf server through the `Item Metadata Tools` in the server settings.
 To add a custom provider you will need the address of the provider (a URL if a public community provider or the IP and port if you're running the custom provider yourself).
 If an authorization token is needed you will also add that here.
 
