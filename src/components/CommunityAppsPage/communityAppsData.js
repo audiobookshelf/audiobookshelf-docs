@@ -68,4 +68,11 @@ export const communityApps = [
     description:
       'A native Audiobookshelf client for HarmonyOS, supporting mobile phones, tablets, and PC/2in1.',
   },
+  {
+    name: 'AudioBooth',
+    platforms: ['iOS', 'iPadOS', 'watchOS', 'macOS'],
+    href: 'https://github.com/AudioBooth/AudioBooth',
+    tags: ['Audiobooks', 'Podcasts', 'Ebooks'],
+    description: 'A free and open source native client packed with features, including offline downloads, CarPlay, widgets, and more.'
+  }
 ];
