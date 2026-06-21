@@ -54,7 +54,7 @@ export const communityApps = [
   },
   {
     name: 'yaabsa',
-    platforms: ['Android', 'AAOS', 'Windows', 'Linux', 'Web', 'iOS', 'iPadOS'],
+    platforms: ['Android', 'AAOS', 'Windows', 'Linux', 'Web', 'iOS', 'iPadOS', 'macOS'],
     href: 'https://github.com/Vito0912/yaabsa/',
     tags: ['Audiobooks', 'Podcasts', 'Ebooks'],
     description:
