@@ -8,12 +8,12 @@ export const communityApps = [
       'A sleek and modern Audiobookshelf client designed for audiobooks, podcasts, iOS, and iPadOS.',
   },
   {
-    name: 'Plappa',
+    name: 'plappa',
     platforms: ['iOS', 'iPadOS'],
     href: 'https://plappa.me/',
-    tags: ['Audiobooks'],
+    tags: ['Audiobooks', 'Podcasts'],
     description:
-      'Audiobook player for Jellyfin and Audiobookshelf, written in Swift and SwiftUI.',
+      'Audiobook/Podcast client for Jellyfin and AudioBookShelf, written in Swift/SwiftUI.',
   },
   {
     name: 'Still',
