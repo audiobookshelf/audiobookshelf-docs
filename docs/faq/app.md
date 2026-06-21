@@ -11,7 +11,7 @@ This section aims to answer common questions related to the app.
 
 Features are still being added and bugs are still being worked out.
 
-The apps are designed to allow you to use the server, not manage the server.
+The first-party apps are designed to allow you to use the server, not manage the server.
 Some management functionality may eventually be added, but if you want to manage the server from your phone you will need to use a web browser.
 Note that the web browser is not optimized for small screens, so some buttons may not show up until you rotate your device to landscape view or select Desktop View in your mobile browser.
 
@@ -37,7 +37,7 @@ Any issues with the apps should be directed to the app maintainers through appro
 
 ## I want to build a client app. What are the rules?
 
-You are welcome to build a 3rd-party client for Auidobookshelf or add Audiobookshelf client integration to an existing app.
+You are welcome to build a 3rd-party client for Audiobookshelf or add Audiobookshelf client integration to an existing app.
 Third-party clients are not required to be open source or provided for free.
 
 Please adhere to the following:

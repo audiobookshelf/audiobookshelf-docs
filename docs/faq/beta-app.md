@@ -29,7 +29,7 @@ Google Play betas are not limited and do not require a separate app to be instal
 
 ## When will spots be cleared in TestFlight to make room for new users?
 
-Users who do not update to the new verison of the TestFlight app are removed from the TestFlight beta.
+Users who do not update to the new version of the TestFlight app are removed from the TestFlight beta.
 We cannot remove people from the TestFlight beta until each beta build expires (90 days after release).
 
 The following table includes approximate release and clear dates for each app version.
@@ -39,7 +39,7 @@ Note that the exact release and clear time may vary by a few days depending on h
 | ------------ | ------------ | ------------ |
 | v0.11.0-beta | Nov 24, 2025 | Feb 22, 2026 |
 | v0.12.0-beta | Feb 11, 2026 | May 12, 2026 |
-| v0.13.0-beta | May 11, 2026 | Aug  9, 2026 |
+| v0.13.0-beta | May 11, 2026 | Aug 9, 2026  |
 
 ## How long do TestFlight spots stay open after being cleared?
 
@@ -59,7 +59,7 @@ A new build will be published before the current version expires.
 
 ## The TestFlight build is about to expire, will there be a new one?
 
-Yes, a new beta build is pushed to TestFlight before each the 90-day beta expires.
+Yes, a new beta build is pushed to TestFlight before each 90-day beta expires.
 
 ## What are my options while the TestFlight is full?
 

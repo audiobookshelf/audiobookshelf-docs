@@ -6,7 +6,7 @@ sidebar_position: 2
 
 :::warning
 
-The following projects are not maintained by the Audiobookshelf team nor did any of the Audiobookshelf team member check them for security issues. **Use at your own risk.**
+The following projects are not maintained by the Audiobookshelf team nor did any of the Audiobookshelf team members check them for security issues. **Use at your own risk.**
 
 :::
 
@@ -15,20 +15,6 @@ This is a community-curated list of Audiobookshelf-related tools. If you have a 
 Another list of tools can be found at [ABS Toolbox - Projects](https://abstoolbox.vito0912.de/projects), but that list is not actively maintained so some information will be out of date.
 
 ---
-
-<!---
-
-## [Project name](https://github.com/yourusername/projectname)
-
-Short description of the project
-
-:::info
-
-A note to the project that is important to know.
-
-:::
-
--->
 
 ## [absToolbox](https://github.com/vito0912/absToolbox)
 

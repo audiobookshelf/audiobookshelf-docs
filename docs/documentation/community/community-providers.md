@@ -4,13 +4,13 @@ title: Metadata Providers
 sidebar_position: 3
 ---
 
-Custom book metadata providers can be added to your Audiobookshelf server through the "Metadata Tools" in teh server settings.
+Custom book metadata providers can be added to your Audiobookshelf server through the `Item Metadata Tools` in the server settings.
 To add a custom provider you will need the address of the provider (a URL if a public community provider or the IP and port if you're running the custom provider yourself).
 If an authorization token is needed you will also add that here.
 
 ![Adding Custom Metadata Provider](/pages/custom_metadata/adding_provider.png)
 
-## Creating custom provider
+## Creating a custom provider
 
 The request and response format that ABS expects for the API is defined in [this OpenAPI spec](https://github.com/advplyr/audiobookshelf/blob/master/custom-metadata-provider-specification.yaml).
 
@@ -18,7 +18,7 @@ The request and response format that ABS expects for the API is defined in [this
 
 :::warning
 
-The following projects are not maintained by the Audiobookshelf team nor did any of the Audiobookshelf team member check them for security issues. **Use at your own risk.**
+The following projects are not maintained by the Audiobookshelf team nor did any of the Audiobookshelf team members check them for security issues. **Use at your own risk.**
 
 :::
 
@@ -32,12 +32,14 @@ If you have made a custom provider and want to share, you can [open a PR for thi
 | Provider         | Repository                                         | Notes                                                                                                                                                     |
 | ---------------- | -------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | abs-tract        | https://github.com/ahobsonsayers/abs-tract         | Provides Goodreads and Kindle metadata                                                                                                                    |
-| lubimyczytac-abs | https://github.com/lakafior/lubimyczytac-abs       | Provides Lubimyczytac (biggest polish site about books) metadata                                                                                          |
+| lubimyczytac-abs | https://github.com/lakafior/lubimyczytac-abs       | Provides Lubimyczytac (biggest Polish site about books) metadata                                                                                          |
 | audioteka-abs    | https://github.com/lakafior/audioteka-abs          | Provides Audioteka (supports Polish and Czech language) metadata                                                                                          |
 | abs-agg          | https://github.com/vito0912/abs-agg                | Provides metadata from: ARD Audiothek, Audioteka, Big Finish, BookBeat, Goodreads, Graphic Audio, Hardcover, LibriVox, Storytel, Die drei ???, Soundbooth |
 | abs-storytel     | https://github.com/Revisor01/abs-storytel-provider | Provides Storytel metadata                                                                                                                                |
-| abs-opds         | https://github.com/DeXP/abs-opds                   | OPDS books catalog (biggest russian: Flibusta, inxp-web) Note: does not provide syncing reading progress                                                  |
+| abs-opds         | https://github.com/DeXP/abs-opds                   | OPDS books catalog (biggest Russian: Flibusta, inxp-web) Note: does not provide syncing reading progress                                                  |
 | Abs-Ximalaya     | https://github.com/shanyan-wcx/Abs-Ximalaya        | Provides Ximalaya (喜马拉雅) metadata                                                                                                                     |
+| abs-ranobedb     | https://github.com/kennethsible/abs-ranobedb       | Provides RanobeDB metadata for Japanese light novels                                                                            |
+| abs-czech-metadata  | https://github.com/stecik/audiobookshelf_czech_metadata      | Provides Czech metadata from many sources (Audiolibrix, Audioteka and more)                                                     ||
 
 ## Community hosted providers
 

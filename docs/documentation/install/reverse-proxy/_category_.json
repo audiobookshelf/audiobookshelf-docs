@@ -4,5 +4,9 @@
     "icon": "mdi:router-network"
   },
   "collapsed": true,
-  "position": 8
+  "position": 8,
+  "link": {
+    "type": "generated-index",
+    "description": "This section provides setup guides for various reverse proxies and remote access."
+  }
 }
