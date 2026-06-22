@@ -17,10 +17,10 @@ export const communityApps = [
   },
   {
     name: 'Still',
-    platforms: ['iOS'],
+    platforms: ['iOS', 'iPadOS', 'watchOS', 'macOS'],
     href: 'https://github.com/7enChan/stillapp',
-    tags: ['Audiobooks'],
-    description: 'A clean, minimalist audiobook player for Audiobookshelf.',
+    tags: ['Audiobooks', 'Podcasts', 'Ebooks'],
+    description: 'A clean, native Audiobookshelf client designed for Apple devices.',
   },
   {
     name: 'Prologue',
