@@ -74,5 +74,12 @@ export const communityApps = [
     href: 'https://github.com/AudioBooth/AudioBooth',
     tags: ['Audiobooks', 'Podcasts', 'Ebooks'],
     description: 'A free and open source native client packed with features, including offline downloads, CarPlay, widgets, and more.'
+  },
+  {
+    name: 'Storii',
+    platforms: ['Android'],
+    href: 'https://github.com/likhithpraveenk/storii',
+    tags: ['Audiobooks', 'Podcasts'],
+    description: 'Storii is an abs client that focuses on a clean user experience and maintainable architecture, written in flutter.'
   }
 ];
