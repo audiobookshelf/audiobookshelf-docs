@@ -64,7 +64,7 @@ export const communityApps = [
     name: 'Harmshelf',
     platforms: ['HarmonyOS'],
     href: 'https://github.com/shanyan-wcx/Harmshelf',
-    tags: ['Audiobooks'],
+    tags: ['Audiobooks', 'Podcasts'],
     description:
       'A native Audiobookshelf client for HarmonyOS, supporting mobile phones, tablets, and PC/2in1.',
   },
