@@ -1,0 +1,235 @@
+<html>
+
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gentium+Book+Basic&display=swap" rel="stylesheet">
+    <script type="text/javascript" src="//www.gstatic.com/cast/sdk/libs/caf_receiver/v3/cast_receiver_framework.js">
+    </script>
+    <!-- Cast Debug Logger -->
+    <!-- <script src="//www.gstatic.com/cast/sdk/libs/devtools/debug_layer/caf_receiver_logger.js"></script> -->
+</head>
+
+<body>
+    <cast-media-player></cast-media-player>
+
+    <div id="idle-backdrop"></div>
+    <div id="backdrop-image-container">
+        <img id="backdrop-image" src="/Logo.png" />
+    </div>
+
+    <div id="idle-screen">
+        <div class="idle-content">
+            <img class="logo" src="/Logo.png" />
+            <p>audiobookshelf</p>
+        </div>
+        <p class="idle-cast-text">Ready for an audiobook cast</p>
+    </div>
+
+    <style>
+        body {
+            --playback-logo-image: url('https://raw.githubusercontent.com/advplyr/audiobookshelf/master/client/static/icon64.png');
+            font-family: 'Gentium Book Basic', serif;
+        }
+
+        #idle-backdrop {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #222;
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-image: linear-gradient(to right bottom, #2e2e2e, #303030, #313131, #333333, #353535, #343434, #323232, #313131, #2c2c2c, #282828, #232323, #1f1f1f);
+            filter: blur(8px);
+            -webkit-filter: blur(8px);
+        }
+
+        #backdrop-image-container {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        #backdrop-image {
+            height: 100%;
+            width: 100%;
+            object-fit: contain;
+        }
+
+        #idle-screen {
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-color: rgba(15, 15, 15, 0.6);
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            padding: 18px 32px;
+            color: white;
+        }
+
+        .idle-content {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            text-align: center;
+            font-size: 3vw;
+            margin-bottom: 3%;
+            margin-left: 5%;
+            display: flex;
+            align-items: center;
+            font-size: 3.5rem;
+            color: #ddd;
+        }
+
+        .idle-content img.logo {
+            height: 72px;
+            width: 72px;
+        }
+
+        .idle-content p {
+            margin-left: 20px;
+        }
+
+        .idle-cast-text {
+            font-size: 2rem;
+            color: #ddd;
+        }
+
+        .active>#idle-backdrop,
+        .active>#backdrop-image-container,
+        .active>#idle-screen {
+            display: none;
+        }
+
+        cast-media-player {
+            --theme-hue: 100;
+            --progress-color: rgb(253, 239, 40);
+            --logo-image: url('/Logo.png');
+            --background-image: linear-gradient(to right bottom, #2e2e2e, #303030, #313131, #333333, #353535, #343434, #323232, #313131, #2c2c2c, #282828, #232323, #1f1f1f);
+            --watermark-image: url('/Logo.png');
+            --watermark-size: 72px;
+            --font-family: 'Gentium Book Basic', serif;
+        }
+    </style>
+    <script>
+        // const castDebugLogger = cast.debug.CastDebugLogger.getInstance();
+        const context = cast.framework.CastReceiverContext.getInstance()
+        context.setLoggerLevel(cast.framework.LoggerLevel.DEBUG)
+
+        const playerManager = context.getPlayerManager()
+
+        // https://developers.google.com/cast/docs/reference/web_receiver/cast.framework.QueueManager
+        const queueManager = playerManager.getQueueManager()
+        queueManager.setQueueStatusLimit(false)
+
+        const serverDetails = {
+            covers: []
+        }
+
+        var backdropInterval = null
+        var currentCoverIndex = 0
+
+        function setState(state) {
+            if (state === 'idle') {
+                if (!backdropInterval) setBackdropInterval()
+            } else if (backdropInterval) {
+                console.log('Clear backdrop interval')
+                clearInterval(backdropInterval)
+                backdropInterval = null
+            }
+            document.body.className = state
+        }
+
+        function sendCheckQueueItems() {
+            var items = queueManager.getItems()
+            var currentItem = queueManager.getCurrentItem() || {}
+            console.log(`Queue has ${items.length} items. Current item is ${currentItem.itemId} with index ${queueManager.getCurrentItemIndex()}`)
+            playerManager.broadcastStatus(true, 1, { type: 'checkQueue' }, true)
+        }
+
+        function setBackdropInterval() {
+            if (!serverDetails.covers.length) {
+                return
+            }
+            console.log('Set Backdrop interval')
+
+            clearInterval(backdropInterval)
+            backdropInterval = setInterval(() => {
+                var coverUrl = serverDetails.covers[currentCoverIndex]
+                console.log('Updating backdrop image', coverUrl)
+                var backdropel = document.getElementById('idle-backdrop')
+                backdropel.style.backgroundImage = `url(${coverUrl})`
+                var backdropimageEl = document.getElementById('backdrop-image')
+                backdropimageEl.src = coverUrl
+
+                currentCoverIndex++
+                if (currentCoverIndex >= serverDetails.covers.length) currentCoverIndex = 0
+            }, 5000)
+        }
+
+        const playerData = {};
+        const playerDataBinder = new cast.framework.ui.PlayerDataBinder(playerData);
+
+        // Update ui according to player state
+        playerDataBinder.addEventListener(
+            cast.framework.ui.PlayerDataEventType.STATE_CHANGED,
+            e => {
+                switch (e.value) {
+                    case cast.framework.ui.State.LAUNCHING:
+                    case cast.framework.ui.State.IDLE:
+                        setState('idle')
+                        break;
+                    case cast.framework.ui.State.LOADING:
+                        setState('active')
+                        break;
+                    case cast.framework.ui.State.BUFFERING:
+                        setState('active')
+                        break;
+                    case cast.framework.ui.State.PAUSED:
+                        setState('active')
+                        break;
+                    case cast.framework.ui.State.PLAYING:
+                        setState('active')
+                        break;
+                }
+            });
+
+        playerManager.setMessageInterceptor(
+            cast.framework.messages.MessageType.LOAD,
+            request => {
+                console.log('Message intercept', request)
+                return request
+            }
+        )
+
+        const CUSTOM_CHANNEL = 'urn:x-cast:com.audiobookshelf.cast'
+        context.addCustomMessageListener(CUSTOM_CHANNEL, (customEvent) => {
+            var data = customEvent.data || {}
+            if (typeof data === 'string') {
+                data = JSON.parse(data)
+            }
+            console.log('Custom message', data)
+
+            if (data.covers && data.covers.length) {
+                serverDetails.covers = data.covers || []
+                setBackdropInterval()
+            }
+        })
+
+        context.addEventListener(cast.framework.system.EventType.READY, () => {
+            console.log('Ready')
+        });
+
+        context.start()
+    </script>
+</body>
+
+</html>
