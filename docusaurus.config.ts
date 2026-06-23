@@ -131,6 +131,20 @@ const config = {
         respectPrefersColorScheme: false,
       },
     },
+
+  plugins: [
+    [
+      "@docusaurus/plugin-client-redirects",
+      {
+        redirects: [
+          {
+            from: "/docs",
+            to: "/docs/documentation/introduction/",
+          },
+        ],
+      },
+    ],
+  ],
 };
 
 export default config;
