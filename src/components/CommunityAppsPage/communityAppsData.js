@@ -58,7 +58,7 @@ export const communityApps = [
     href: 'https://github.com/Vito0912/yaabsa/',
     tags: ['Audiobooks', 'Podcasts', 'Ebooks'],
     description:
-      'A responsive mobile, desktop and car client, supporting audiobooks, podcasts and ebooks.',
+      'A responsive client for mobile, desktop, and cars for listening or managing. A complete replacement for the ABS web app. It includes unique features like subtitles, synced annotations for ebooks, music, and whispersync-like support for EPUB Media 3.',
   },
   {
     name: 'Harmshelf',
