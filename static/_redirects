@@ -1,0 +1,7 @@
+# This file allows for server-side redirects on Netlify, which is what the website
+# is hosted on.
+# This is due to the plugin-client-redirects plugin recommending server-side redirects
+# https://docusaurus.io/docs/api/plugins/@docusaurus/plugin-client-redirects
+# https://docs.netlify.com/manage/routing/redirects/overview/
+
+/madeup-path    /docs
