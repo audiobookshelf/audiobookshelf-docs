@@ -32,10 +32,10 @@ export const communityApps = [
   },
   {
     name: 'SoundLeaf',
-    platforms: ['iOS'],
+    platforms: ['iOS', 'iPadOS', 'macOS'],
     href: 'https://soundleafapp.com/',
-    tags: ['Audiobooks'],
-    description: 'A premium Audiobookshelf client.',
+    tags: ['Audiobooks', 'Podcasts'],
+    description: 'A native Audiobookshelf client for iPhone, iPad, and Mac. Listen to audiobooks and podcasts with CarPlay, offline downloads, a drag-to-reorder queue, sleep timer, chapter navigation, and automatic progress sync, all wrapped in a polished, native iOS design.',
   },
   {
     name: 'ABS-wear',
