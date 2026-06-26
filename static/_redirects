@@ -4,4 +4,4 @@
 # https://docusaurus.io/docs/api/plugins/@docusaurus/plugin-client-redirects
 # https://docs.netlify.com/manage/routing/redirects/overview/
 
-/madeup-path    /docs/documentation/introduction
+/docs    /docs/documentation/introduction
