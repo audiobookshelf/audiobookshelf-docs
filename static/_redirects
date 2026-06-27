@@ -4,6 +4,10 @@
 # https://docusaurus.io/docs/api/plugins/@docusaurus/plugin-client-redirects
 # https://docs.netlify.com/manage/routing/redirects/overview/
 
-/docs       /docs/documentation/introduction
-/guides     /docs/documentation/introduction
-/support    /docs/contributing/general
+/docs           /docs/documentation/introduction
+/guides         /docs/documentation/introduction
+/support        /docs/contributing/general
+/faq            /docs/faq/general
+/faq/general    /docs/faq/general
+/faq/server     /docs/faq/server
+/faq/app        /docs/faq/app
