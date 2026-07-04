@@ -18,7 +18,7 @@
 /guides/oidc_authentication           /docs/documentation/server-management/oidc-authentication
 /guides/media-item-shares             /docs/documentation/libraries/common-content/public-shares#media-item-shares
 /guides/custom-metadata-providers     /docs/documentation/community/community-providers
-/guides/send_to_ereader               /docs/documentation/libraries/book-library/ebooks
+/guides/send_to_ereader               /docs/documentation/libraries/book-library/ebooks/#send-to-e-reader
 /guides/collections                   /docs/documentation/libraries/common-content/playlists
 /guides/book-scanner                  /docs/documentation/libraries/book-library/book-metadata
 /guides/library_creation              /docs/documentation/libraries/common-content/overview
