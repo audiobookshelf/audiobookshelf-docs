@@ -50,5 +50,12 @@ export const communityApps = [
     href: 'https://github.com/likhithpraveenk/storii',
     tags: ['Audiobooks', 'Podcasts'],
     description: 'Storii is an abs client that focuses on a clean user experience and maintainable architecture, written in flutter.'
+  },
+  {
+    name: 'Absorb',
+    platforms: ['Android', 'iOS', 'iPadOS'],
+    href: 'https://github.com/pounat/absorb',
+    tags: ['Audiobooks', 'Podcasts'],
+    description: 'A full-featured Audiobookshelf client for Android and iOS with a unique card-based library layout. Listen to audiobooks and podcasts with Android Auto and CarPlay support, offline downloads, customizable themes and per-library settings, and detailed listening stats, all with live sync, home screen widgets, and a sleep timer.'
   }
 ];
