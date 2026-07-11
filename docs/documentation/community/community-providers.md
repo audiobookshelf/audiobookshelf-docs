@@ -40,8 +40,7 @@ If you have made a custom provider and want to share, you can [open a PR for thi
 | Abs-Ximalaya     | https://github.com/shanyan-wcx/Abs-Ximalaya        | Provides Ximalaya (喜马拉雅) metadata                                                                                                                     |
 | abs-ranobedb     | https://github.com/kennethsible/abs-ranobedb       | Provides RanobeDB metadata for Japanese light novels                                                                            |
 | abs-czech-metadata  | https://github.com/stecik/audiobookshelf_czech_metadata      | Provides Czech metadata from many sources (Audiolibrix, Audioteka and more)                                                     |
-| Audiobookshelf Metadata Providers | https://github.com/spaantje/audiobookshelf-metadata-provider | Eight self-hosted PHP providers: Nextory, Storytel, Hardcover, BookBeat, Libro.fm,
-  LibriVox, Graphic Audio, Soundbooth Theater. Dependency-free, deploys on Laravel Forge or any PHP 8 host. Hardcover needs a free Hardcover API token; the rest need no upstream account. |
+| Audiobookshelf Metadata Providers | https://github.com/spaantje/audiobookshelf-metadata-provider | Eight self-hosted PHP providers: Nextory, Storytel, Hardcover, BookBeat, Libro.fm, LibriVox, Graphic Audio, Soundbooth Theater. Dependency-free, deploys on Laravel Forge or any PHP 8 host. Hardcover needs a free Hardcover API token; the rest need no upstream account. |
 
 ## Community hosted providers
 
