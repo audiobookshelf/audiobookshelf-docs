@@ -27,7 +27,7 @@ Please refer to the provider documentation for information about how to set up t
 
 Issues with these providers should be brought up to the provider author and not in the main ABS repositories.
 
-If you have made a custom provider and want to share, you can [open a PR for this file](https://github.com/audiobookshelf/audiobookshelf-web/blob/master/content/guides/13.custom-metadata-providers.md) to add your information to the table.
+If you have made a custom provider and want to share, you can [open a PR for this file](https://github.com/audiobookshelf/audiobookshelf-docs/blob/master/docs/documentation/community/community-providers.md) to add your information to the table.
 
 | Provider         | Repository                                         | Notes                                                                                                                                                     |
 | ---------------- | -------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -46,7 +46,7 @@ If you have made a custom provider and want to share, you can [open a PR for thi
 These providers are hosted by community members so you can easily add them to your ABS server without running additional software.
 These are not hosted by the ABS team or authors of the providers, so issues should not be opened with the provider or ABS repositories.
 
-If you host a custom provider and want to share, you can [open a PR for this file](https://github.com/audiobookshelf/audiobookshelf-web/blob/master/content/guides/13.custom-metadata-providers.md) to add your information to the table.
+If you host a custom provider and want to share, you can [open a PR for this file](https://github.com/audiobookshelf/audiobookshelf-docs/blob/master/docs/documentation/community/community-providers.md) to add your information to the table.
 
 | Provider | Address                                                                                                                                                                                                                                                                                                                                                                                                                              | Auth | Contact                                           | Notes                                                                                                                                         |
 | -------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---- | ------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------- |
