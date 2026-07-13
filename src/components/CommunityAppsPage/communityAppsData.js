@@ -57,5 +57,12 @@ export const communityApps = [
     href: 'https://github.com/pounat/absorb',
     tags: ['Audiobooks', 'Podcasts'],
     description: 'A full-featured Audiobookshelf client for Android and iOS with a unique card-based library layout. Listen to audiobooks and podcasts with Android Auto and CarPlay support, offline downloads, customizable themes and per-library settings, and detailed listening stats, all with live sync, home screen widgets, and a sleep timer.'
+  },
+  {
+    name: 'Auribook',
+    platforms: ['watchOS'],
+    href: 'https://auribook.jminke.com',
+    tags: ['Audiobooks', 'Podcasts'],
+    description: 'A standalone Apple Watch (watchOS) client designed for downloading your audiobooks and podcasts directly on your wrist, without any iPhone. Perfect for doing sports and for kids having only an Apple Watch.'
   }
 ];
