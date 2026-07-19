@@ -3,7 +3,7 @@ export const communityApps = [
     name: 'Voca Player',
     platforms: ['iOS', 'iPadOS', 'watchOS', 'tvOS', 'Android', 'AAOS'],
     href: 'https://voca.velosec.au',
-    tags: ['Audiobooks', 'Podcasts'],
+    tags: ['Audiobooks', 'Podcasts', 'Ebooks'],
     description:
       'A native audiobook and podcast player for iPhone, iPad, Apple Watch, Apple TV, and Android. Includes CarPlay and Android Auto, offline downloads, chapter navigation, a sleep timer, and extras support for ePub's & PDF's.',
   },
