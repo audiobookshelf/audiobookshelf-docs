@@ -40,10 +40,10 @@ The project was originally started as a passion project by [advplyr](https://git
 
 ## How often do updates happen? Is the project dead?
 
-No, the project is not dead. Commits are made nearly every between the server, web client, mobile apps, and documentation. However, parts of the project may appear dead due to the focus being on a different part of the project.
+No, the project is not dead. Daily commits are made between the server, web client, mobile apps, and documentation. However, parts of the project may appear dead due to the focus being on a different part of the project.
 
-A new server version is generally put out once every month, but there is no formal release cycle. The releases happen when they are ready.
+A new server version is generally released every month, but there is no formal release cycle or day of the month the release happens. Releases happen when they are ready.
 
-New builds of the beta app are released approximately every 3 months.
+New builds of the [beta app](/docs/faq/app-beta) are released approximately every 3 months.
 
-The web client is currently going through a long-put-off rewrite and migration to move away from the Vue 2 framework, which has been EOL since 2023.
+The web client is currently going through a much needed rewrite and migration away from the Vue 2 framework, which has been EOL since 2023.
