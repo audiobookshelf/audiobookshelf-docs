@@ -25,4 +25,25 @@ If your feature request does not exist, you can create a new Feature Request or 
 
 ## How can I help out?
 
-Please take a look at the Contributing section. If you still have questions, feel free to ask for help on Discord or GitHub.
+Please take a look at [the Contributing section](/docs/contributing/general). If you still have questions, feel free to ask for help on Discord or GitHub.
+
+## How should I report security issues?
+
+Take a look at the security policy located at TBR.
+Please report the issue privately in the respective repository. 
+https://github.com/advplyr/audiobookshelf/security
+TBD, need to figure out where to put a list of common reports that are not security issues
+
+## Why is the server located under advplyr's account and not the Audiobookshelf organization?
+
+The project was originally started as a passion project by [advplyr](https://github.com/advplyr) and he is still the main maintainer and contributor. The Audiobookshelf organization was created later. The [server](https://github.com/advplyr/audiobookshelf) and [app](https://github.com/advplyr/audiobookshelf-app) repositories will eventually be moved to be under the GitHub organization, it just has not happened yet.
+
+## How often do updates happen? Is the project dead?
+
+No, the project is not dead. Commits are made nearly every between the server, web client, mobile apps, and documentation. However, parts of the project may appear dead due to the focus being on a different part of the project.
+
+A new server version is generally put out once every month, but there is no formal release cycle. The releases happen when they are ready.
+
+New builds of the beta app are released approximately every 3 months.
+
+The web client is currently going through a long-put-off rewrite and migration to move away from the Vue 2 framework, which has been EOL since 2023.
