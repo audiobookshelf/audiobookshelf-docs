@@ -29,18 +29,15 @@ Please take a look at [the Contributing section](/docs/contributing/general). If
 
 ## How should I report security issues?
 
-Take a look at the security policy located at TBR.
-Please report the issue privately in the respective repository. 
-https://github.com/advplyr/audiobookshelf/security
-TBD, need to figure out where to put a list of common reports that are not security issues
+[See here](/docs/contributing/security).
 
 ## Why is the server located under advplyr's account and not the Audiobookshelf organization?
 
-The project was originally started as a passion project by [advplyr](https://github.com/advplyr) and he is still the main maintainer and contributor. The Audiobookshelf organization was created later. The [server](https://github.com/advplyr/audiobookshelf) and [app](https://github.com/advplyr/audiobookshelf-app) repositories will eventually be moved to be under the GitHub organization, it just has not happened yet.
+The project was originally started as a passion project by [advplyr](https://github.com/advplyr), who is still the main maintainer and contributor. The Audiobookshelf organization was created later. The [server](https://github.com/advplyr/audiobookshelf) and [app](https://github.com/advplyr/audiobookshelf-app) repositories will eventually be moved to be under the GitHub organization, it just has not happened yet.
 
-## How often do updates happen? Is the project dead?
+## When do updates happen? Is the project dead?
 
-No, the project is not dead. Daily commits are made between the server, web client, mobile apps, and documentation. However, parts of the project may appear dead due to the focus being on a different part of the project.
+No, the project is not dead. Daily commits are made between the server, web client, mobile apps, and documentation. However, parts of the project may appear dead at any given time due to focus shifting around the project.
 
 A new server version is generally released every month, but there is no formal release cycle or day of the month the release happens. Releases happen when they are ready.
 
