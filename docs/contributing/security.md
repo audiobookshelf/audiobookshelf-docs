@@ -13,7 +13,7 @@ Security vulnerabilities with the apps should be reported [here](https://github.
 
 It may take some time to review and respond to vulnerabilities due to an increasing number of reports with the increased usage of AI tools.
 
-## Common Vulnerability Reports
+## Common False Positives
 
 The following should not be reported as a vulnerability.
 
