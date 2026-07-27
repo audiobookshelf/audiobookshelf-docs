@@ -43,4 +43,4 @@ A new server version is generally released every month, but there is no formal r
 
 New builds of the [beta app](/docs/faq/app-beta) are released approximately every 3 months.
 
-The web client is currently going through a much needed rewrite and migration away from the Vue 2 framework, which has been EOL since 2023.
+The web client is currently [going through a much needed rewrite and migration](https://github.com/audiobookshelf/audiobookshelf-client-react) away from the Vue 2 framework, which has been EOL since 2023.
