@@ -29,7 +29,7 @@ Please take a look at [the Contributing section](/docs/contributing/general). If
 
 ## How should I report security issues?
 
-[See here](/docs/contributing/security).
+[See contributing/security](/docs/contributing/security).
 
 ## Why is the server located under advplyr's account and not the Audiobookshelf organization?
 
