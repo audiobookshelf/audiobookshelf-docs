@@ -67,7 +67,7 @@ export const communityApps = [
   },
   {
     name: 'Voca',
-    platforms: ['iOS', 'iPadOS', 'watchOS', 'tvOS', 'Android', 'AAOS'],
+    platforms: ['iOS', 'iPadOS', 'watchOS', 'tvOS', 'Android'],
     href: 'https://voca.velosec.au',
     tags: ['Audiobooks', 'Podcasts', 'Ebooks'],
     description:
