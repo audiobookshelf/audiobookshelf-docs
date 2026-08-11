@@ -31,11 +31,11 @@ export const communityApps = [
   },
   {
     name: 'yaabsa',
-    platforms: ['Android', 'AAOS', 'Windows', 'Linux', 'Web', 'iOS', 'iPadOS', 'macOS'],
+    platforms: ['Android', 'AAOS', 'wearOS', 'Windows', 'Linux', 'Web', 'iOS', 'iPadOS', 'macOS'],
     href: 'https://github.com/Vito0912/yaabsa/',
     tags: ['Audiobooks', 'Podcasts', 'Ebooks'],
     description:
-      'A responsive client for mobile, desktop, and cars for listening or managing. A complete replacement for the ABS web app. It includes unique features like subtitles, synced annotations for ebooks, music, and whispersync-like support for EPUB Media 3.',
+      'A responsive client for mobile, desktop, cars and watch (alpha) for listening or managing. A complete replacement for the ABS web app. It includes unique features like synced annotations for ebooks, subtitles and whispersync-like support for EPUB Media 3.',
   },
   {
     name: 'Harmshelf',
