@@ -72,5 +72,12 @@ export const communityApps = [
     tags: ['Audiobooks', 'Podcasts', 'Ebooks'],
     description:
       'A native audiobook and podcast player for iPhone, iPad, Apple Watch, Apple TV, and Android. Includes CarPlay and Android Auto, offline downloads, chapter navigation, a sleep timer, and extras support for ePubs and PDFs.',
+  },
+  {
+    name: 'Verbara',
+    platforms: ['iOS', 'iPadOS'],
+    href: 'https://verbara.app',
+    tags: ['Podcasts'],
+    description: 'Verbara is a podcast app for Plex, Audiobookshelf and RSS. Store your shows in one library with smart download, transcription, ad detection, metadata correction and more.'
   }
 ];
