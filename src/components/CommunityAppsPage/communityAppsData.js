@@ -64,5 +64,12 @@ export const communityApps = [
     href: 'https://auribook.jminke.com',
     tags: ['Audiobooks', 'Podcasts'],
     description: 'A standalone Apple Watch (watchOS) client designed for downloading your audiobooks and podcasts directly on your wrist, without any iPhone. Perfect for doing sports and for kids having only an Apple Watch.'
+  },
+  {
+    name: 'Verbara',
+    platforms: ['iOS', 'iPadOS'],
+    href: 'https://verbara.app',
+    tags: ['Podcasts'],
+    description: 'Verbara is a podcast app for Plex, Audiobookshelf and RSS. Store your shows in one library with smart download, transcription, ad detection, metadata correction and more.'
   }
 ];
