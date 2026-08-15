@@ -71,5 +71,13 @@ export const communityApps = [
     href: 'https://verbara.app',
     tags: ['Podcasts'],
     description: 'Verbara is a podcast app for Plex, Audiobookshelf and RSS. Store your shows in one library with smart download, transcription, ad detection, metadata correction and more.'
+  },
+  {
+    name: 'ShelfPod',
+    platforms: ['iOS', 'iPadOS', 'macOS'],
+    href: 'https://github.com/Ryziii/ShelfPod-community',
+    tags: ['Audiobooks', 'Podcasts'],
+    description:
+      'Seamlessly pick up where you left off across iPhone, iPad, and Mac, with a polished UI and refined podcast library.',
   }
 ];
