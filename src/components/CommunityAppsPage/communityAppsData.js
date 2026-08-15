@@ -71,6 +71,6 @@ export const communityApps = [
     href: 'https://gitlab.com/13werwolf13/absigami',
     tags: ['Audiobooks', 'Ebooks'],
     description:
-      'KDE Kirigami desktop client for Audiobookshelf.',
+      '3rd party KDE Kirigami desktop client for Audiobookshelf.',
   },
 ];
