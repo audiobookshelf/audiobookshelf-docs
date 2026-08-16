@@ -71,5 +71,12 @@ export const communityApps = [
     href: 'https://verbara.app',
     tags: ['Podcasts'],
     description: 'Verbara is a podcast app for Plex, Audiobookshelf and RSS. Store your shows in one library with smart download, transcription, ad detection, metadata correction and more.'
+  },
+  {
+    name: 'Inkshelf',
+    platforms: ['Web'],
+    href: 'https://github.com/thomaslazar/inkshelf',
+    tags: ['Ebooks'],
+    description: 'A thin, server-rendered web client with near-zero JavaScript, built for the weak browsers on e-ink e-readers. Runs as a sidecar container next to Audiobookshelf: browse and search your libraries, download ebooks, or convert CBZ/CBR comics on demand into a device-sized, fixed-layout EPUB.'
   }
 ];
