@@ -66,6 +66,14 @@ export const communityApps = [
     description: 'A standalone Apple Watch (watchOS) client designed for downloading your audiobooks and podcasts directly on your wrist, without any iPhone. Perfect for doing sports and for kids having only an Apple Watch.'
   },
   {
+    name: 'Voca',
+    platforms: ['iOS', 'iPadOS', 'watchOS', 'tvOS', 'Android'],
+    href: 'https://voca.velosec.au',
+    tags: ['Audiobooks', 'Podcasts', 'Ebooks'],
+    description:
+      'A native audiobook and podcast player for iPhone, iPad, Apple Watch, Apple TV, and Android. Includes CarPlay and Android Auto, offline downloads, chapter navigation, a sleep timer, and extras support for ePubs and PDFs.',
+  },
+  {
     name: 'Verbara',
     platforms: ['iOS', 'iPadOS'],
     href: 'https://verbara.app',
