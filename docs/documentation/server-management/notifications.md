@@ -15,7 +15,7 @@ You will need to have an instance of the **Apprise API** running, or another API
 
 Enter the full URL path to your Apprise API instance for Audiobookshelf to send notifications to.
 
-To prevent notification spam, Audiobookshelf will only send 1 notification per second. If the notificaiton queue is full, new notifications are dropped. Individual notifications will be disabled if the notification fails to send the configured number of times in a row.
+To prevent notification spam, Audiobookshelf will only send 1 notification per second. If the notification queue is full, new notifications are dropped. Individual notifications will be disabled if the notification fails to send the configured number of times in a row.
 
 ## Notifications
 
