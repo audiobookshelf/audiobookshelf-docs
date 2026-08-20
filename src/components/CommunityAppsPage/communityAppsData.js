@@ -79,5 +79,13 @@ export const communityApps = [
     href: 'https://verbara.app',
     tags: ['Podcasts'],
     description: 'Verbara is a podcast app for Plex, Audiobookshelf and RSS. Store your shows in one library with smart download, transcription, ad detection, metadata correction and more.'
+  },
+  {
+    name: 'Witbound',
+    platforms: ['iOS', 'iPadOS'],
+    href: 'https://witbound.app',
+    tags: ['Audiobooks', 'Ebooks'],
+    description:
+      'A read-along client that pairs an audiobook with its ebook and highlights each word as the narrator reads it. Browse your Audiobookshelf library, download audiobooks and ebooks for offline use, pair them for word-by-word read-along, and tap any word to jump the narration there.',
   }
 ];
