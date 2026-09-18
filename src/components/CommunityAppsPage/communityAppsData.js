@@ -79,5 +79,13 @@ export const communityApps = [
     href: 'https://verbara.app',
     tags: ['Podcasts'],
     description: 'Verbara is a podcast app for Plex, Audiobookshelf and RSS. Store your shows in one library with smart download, transcription, ad detection, metadata correction and more.'
-  }
+  },
+  {
+    name: 'Lorecaster',
+    platforms: ['iOS', 'iPadOS'],
+    href: 'https://hyperscribe.co/lorecaster/',
+    tags: ['Audiobooks', 'Podcasts'],
+    description:
+      'Native iPhone and iPad client for Audiobookshelf. Streaming is free. CarPlay, progress sync, collections, playlists, series grouping, chapters, sleep timer, and offline downloads.',
+  },
 ];
