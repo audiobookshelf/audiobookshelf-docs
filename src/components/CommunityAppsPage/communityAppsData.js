@@ -111,5 +111,13 @@ export const communityApps = [
     href: 'https://verbara.app',
     tags: ['Podcasts'],
     description: 'Verbara is a podcast app for Plex, Audiobookshelf and RSS. Store your shows in one library with smart download, transcription, ad detection, metadata correction and more.'
+  },
+  {
+    name: 'Kirshigo',
+    platforms: ['iOS', 'iPadOS'],
+    href: 'https://apps.apple.com/us/app/kirshigo/id6808634307',
+    tags: ['Audiobooks'],
+    description:
+      'A native App for iPhone and iPad focused on audiobook listening. Features offline downloads, progress sync, chapter navigation, bookmarks, sleep timers, CarPlay and a clean interface designed specifically for long-form audio.',
   }
 ];
