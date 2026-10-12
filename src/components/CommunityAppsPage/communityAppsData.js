@@ -111,5 +111,16 @@ export const communityApps = [
     href: 'https://verbara.app',
     tags: ['Podcasts'],
     description: 'Verbara is a podcast app for Plex, Audiobookshelf and RSS. Store your shows in one library with smart download, transcription, ad detection, metadata correction and more.'
-  }
+  },
+  {
+    name: 'Audiobooklet',
+    auth: {
+      apiKey: true,
+    },
+    platforms: ['Linux'],
+    href: 'https://github.com/gdr-aislop/audiobooklet',
+    tags: ['Audiobooks'],
+    description:
+      'An audiobook player for the moblie Linux. Offline-first. Phosh/Adawaita/Rust.',
+  },
 ];
