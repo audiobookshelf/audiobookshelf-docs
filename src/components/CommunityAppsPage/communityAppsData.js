@@ -121,6 +121,6 @@ export const communityApps = [
     href: 'https://github.com/gdr-aislop/audiobooklet',
     tags: ['Audiobooks'],
     description:
-      'An audiobook player for the moblie Linux. Offline-first. Phosh/Adawaita/Rust.',
+      'An audiobook player for Linux phones. Offline-first. Phosh/Adawaita/GTK/Rust.',
   },
 ];
