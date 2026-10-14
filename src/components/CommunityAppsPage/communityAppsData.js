@@ -111,5 +111,13 @@ export const communityApps = [
     href: 'https://verbara.app',
     tags: ['Podcasts'],
     description: 'Verbara is a podcast app for Plex, Audiobookshelf and RSS. Store your shows in one library with smart download, transcription, ad detection, metadata correction and more.'
+  },
+  {
+    name: 'Tonspur',
+    auth: {oidc: {redirectUri: 'tonspur://oauth'}},
+    platforms: ['iOS', 'iPadOS', 'watchOS', 'macOS'],
+    href: 'https://tonspur.app',
+    tags: ['Audiobooks', 'Podcasts', 'Ebooks'],
+    description: 'Inspired by Apple Music, Tonspur is an opinionated client supporting large libraries, multiple servers, CarPlay, Shortcuts, widgets and more.'
   }
 ];
