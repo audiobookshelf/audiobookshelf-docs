@@ -114,6 +114,7 @@ export const communityApps = [
   },
   {
     name: 'Tonspur',
+    auth: {oidc: {redirectUri: 'tonspur://oauth'}},
     platforms: ['iOS', 'iPadOS', 'watchOS', 'macOS'],
     href: 'https://tonspur.app',
     tags: ['Audiobooks', 'Podcasts', 'Ebooks'],
