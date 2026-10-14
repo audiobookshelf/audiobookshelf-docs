@@ -30,6 +30,7 @@ export const communityApps = [
   },
   {
     name: 'SoundLeaf',
+    auth: {oidc: {redirectUri: 'soundleaf://oauth'}},
     platforms: ['iOS', 'iPadOS', 'macOS'],
     href: 'https://soundleafapp.com/',
     tags: ['Audiobooks', 'Podcasts'],
