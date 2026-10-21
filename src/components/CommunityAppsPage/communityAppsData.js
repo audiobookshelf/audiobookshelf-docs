@@ -116,5 +116,14 @@ export const communityApps = [
     href: 'https://verbara.app',
     tags: ['Podcasts'],
     description: 'Verbara is a podcast app for Plex, Audiobookshelf and RSS. Store your shows in one library with smart download, transcription, ad detection, metadata correction and more.'
+  },
+  {
+    name: 'Excerpt',
+    auth: { apiKey: true },
+    platforms: ['iOS', 'iPadOS'],
+    href: 'https://octetmediteranee.eu/excerpt/',
+    tags: ['Audiobooks'],
+    description:
+      'An audiobook player for people who take notes. Highlight a passage while listening and it is transcribed on the device, matched to the EPUB if you add one, and can be sent to Readwise/PKM. Downloads books from your server and keeps listening progress in sync both ways.'
   }
 ];
