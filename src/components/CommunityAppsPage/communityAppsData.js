@@ -86,10 +86,14 @@ export const communityApps = [
   },
   {
     name: 'Absorb',
+    auth: {
+      oidc: {redirectUri: 'absorb://oauth'},
+      apiKey: true,
+    },
     platforms: ['Android', 'iOS', 'iPadOS'],
     href: 'https://github.com/pounat/absorb',
-    tags: ['Audiobooks', 'Podcasts'],
-    description: 'A full-featured Audiobookshelf client for Android and iOS with a unique card-based library layout. Listen to audiobooks and podcasts with Android Auto and CarPlay support, offline downloads, customizable themes and per-library settings, and detailed listening stats, all with live sync, home screen widgets, and a sleep timer.'
+    tags: ['Audiobooks', 'Podcasts', 'Ebooks'],
+    description: 'A free Audiobookshelf client for Android and iOS built around swipeable book cards, packed with features like server management, read along via transcription matching or EPUB3 media overlays, and more.'
   },
   {
     name: 'Auribook',
