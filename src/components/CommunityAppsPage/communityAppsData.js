@@ -116,5 +116,14 @@ export const communityApps = [
     href: 'https://verbara.app',
     tags: ['Podcasts'],
     description: 'Verbara is a podcast app for Plex, Audiobookshelf and RSS. Store your shows in one library with smart download, transcription, ad detection, metadata correction and more.'
+  },
+  {
+    name: 'Unpaged',
+    auth: {apiKey: true},
+    platforms: ['iOS'],
+    href: 'https://andreibalu.github.io/Ebooker/',
+    tags: ['Audiobooks'],
+    description:
+      'A native iPhone audiobook player for your Audiobookshelf server, your own audio files and free LibriVox classics. Stream or download audiobooks for offline listening, browse series, collections, authors and narrators, and sync listening progress back to your server. Supports username/password login and API keys. Podcast libraries are not supported.',
   }
 ];
