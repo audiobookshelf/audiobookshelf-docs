@@ -116,5 +116,13 @@ export const communityApps = [
     href: 'https://verbara.app',
     tags: ['Podcasts'],
     description: 'Verbara is a podcast app for Plex, Audiobookshelf and RSS. Store your shows in one library with smart download, transcription, ad detection, metadata correction and more.'
-  }
+  },
+  {
+    name: 'ABS+',
+    platforms: ['Android', 'iOS'],
+    href: 'https://absplus.app/',
+    tags: ['Audiobooks', 'Podcasts'],
+    description:
+      'A small, fast player for your own server on Android and iPhone: streaming, offline downloads and synced progress for audiobooks and podcasts. Open source (MIT).',
+  },
 ];
