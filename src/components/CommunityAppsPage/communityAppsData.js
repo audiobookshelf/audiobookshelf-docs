@@ -116,5 +116,14 @@ export const communityApps = [
     href: 'https://verbara.app',
     tags: ['Podcasts'],
     description: 'Verbara is a podcast app for Plex, Audiobookshelf and RSS. Store your shows in one library with smart download, transcription, ad detection, metadata correction and more.'
+  },
+ {
+    name: 'Mär',
+    auth: {apiKey: true},
+    platforms: ['iOS', 'iPadOS', 'macOS'],
+    href: 'https://maer.fm/',
+    tags: ['Audiobooks', 'Podcasts'],
+    description:
+      'Open source player for audiobooks, podcasts, music and internet radio. Audiobookshelf libraries with chapters and progress sync, CarPlay, offline downloads. No account, no tracking.',
   }
 ];
