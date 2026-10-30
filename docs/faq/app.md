@@ -42,7 +42,7 @@ Third-party clients are not required to be open source or provided for free.
 
 Please adhere to the following:
 
-- If you refer to Audiobookshelf in your app's name or materials, write it as `audiobookshelf`, `Audiobookshelf`, or `ABS`.
+- If you refer to Audiobookshelf, write it as `audiobookshelf`, `Audiobookshelf`, or `ABS`.
 - Make it clear that your app is an independent, third-party app. Do not use the Audiobookshelf name or logo in a way that suggests the app is official or affiliated with the Audiobookshelf organization unless you have permission from ABS maintainers (this includes the abbreviation `ABS` in the app name).
 - Do not use the Audiobookshelf name or logo in any context that promotes or encourages piracy.
 - Apps that support OIDC must use their own unique redirect URI. Do not use `audiobookshelf://oauth`.
