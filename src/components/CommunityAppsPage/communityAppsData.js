@@ -116,5 +116,14 @@ export const communityApps = [
     href: 'https://verbara.app',
     tags: ['Podcasts'],
     description: 'Verbara is a podcast app for Plex, Audiobookshelf and RSS. Store your shows in one library with smart download, transcription, ad detection, metadata correction and more.'
+  },
+  {
+    name: 'JustRead',
+    auth: {oidc: {redirectUri: 'justread://oauth'}},
+    platforms: ['iOS', 'iPadOS'],
+    href: 'https://justread.app/',
+    tags: ['Audiobooks', 'Ebooks'],
+    description:
+      'An EPUB, PDF and comic reader with an audiobook player. Downloads audiobooks and ebooks from Audiobookshelf for offline use, syncs progress and bookmarks with the server, and Listen & Read follows the ebook along with its audiobook. Paid, with 14 days free.',
   }
 ];
