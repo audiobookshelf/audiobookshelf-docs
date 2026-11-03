@@ -118,14 +118,14 @@ export const communityApps = [
     description: 'Verbara is a podcast app for Plex, Audiobookshelf and RSS. Store your shows in one library with smart download, transcription, ad detection, metadata correction and more.'
   },
   {
-	 name: 'ABShelf: Podcasts',
+	name: 'ShelfCasts',
     platforms: ['iOS', 'iPadOS'],
     href: 'https://apps.dushok.com',
     tags: ['Podcasts'],
-    description: 'A podcast client with support for iPhone, iPad, and iPhone Duo.   Includes CarPlay support, a playback queue you can easily arrange, downloads for listening when connectivity is poor, chapter navigation and embedded artwork when available in an episode, automatic downloads of new episodes and notifications when ABShelf discovers new episodes on your server.   This app has been in development since May 2025.'
+    description: 'A podcast client with support for iPhone, iPad, and iPhone Duo.   Includes CarPlay support, a playback queue you can easily arrange, downloads for listening when connectivity is poor, chapter navigation and embedded artwork when available in an episode, automatic downloads of new episodes and notifications when ShelfCasts discovers new episodes on your server.   This app has been in development since May 2025.'
   },
   {
-	 name: 'ABShelf: Audiobooks',
+	name: 'ShelfTales',
     platforms: ['iOS', 'iPadOS'],
     href: 'https://apps.dushok.com',
     tags: ['Audiobooks'],
