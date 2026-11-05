@@ -124,6 +124,6 @@ export const communityApps = [
     href: 'https://octetmediteranee.eu/excerpt/',
     tags: ['Audiobooks'],
     description:
-      'An audiobook player for people who take notes. Highlight a passage while listening and it is transcribed on the device, matched to the EPUB if you add one, and can be sent to Readwise/PKM. Downloads books from your server and keeps listening progress in sync both ways.'
+      'An audiobook player that lets you highlight what you hear. Tap Highlight and the last 30 seconds are saved as text on the device, matched to the EPUB if you link one, and sent to Obsidian, Readwise or Markdown. Download or stream books from your server; progress syncs both ways.'
   }
 ];
