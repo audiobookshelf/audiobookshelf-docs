@@ -116,5 +116,12 @@ export const communityApps = [
     href: 'https://verbara.app',
     tags: ['Podcasts'],
     description: 'Verbara is a podcast app for Plex, Audiobookshelf and RSS. Store your shows in one library with smart download, transcription, ad detection, metadata correction and more.'
+  },
+  {
+    name: 'PoRaBar',
+    platforms: ['iOS', 'iPadOS', 'macOS'],
+    href: 'https://porabar.com',
+    tags: ['Audiobooks', 'Podcasts'],
+    description: 'A menu bar player for Mac with a companion iPhone and iPad app. It combines your Audiobookshelf library with internet radio, podcasts and YouTube livestreams in one player, with progress synced back to the server, chapter navigation, a sleep timer, an up next queue, and handoff between Mac and iPhone.'
   }
 ];
