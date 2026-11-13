@@ -12,6 +12,14 @@
 //   Never use 'audiobookshelf://oauth', which belongs to the official app.
 export const communityApps = [
   {
+    name: 'Audiobook Player: MP3 M4A M4B',
+    platforms: ['iOS', 'iPadOS'],
+    href: 'https://apps.apple.com/app/id6758897043',
+    tags: ['Audiobooks'],
+    description:
+      'A native audiobook player for iPhone and iPad with Audiobookshelf support. Stream or download books for offline listening, sync listening progress with your server, and listen with CarPlay. Also supports local files, Put.io, and WebDAV.',
+  },
+  {
     name: 'plappa',
     auth: {oidc: {redirectUri: 'plappa://oauth'}},
     platforms: ['iOS', 'iPadOS'],
