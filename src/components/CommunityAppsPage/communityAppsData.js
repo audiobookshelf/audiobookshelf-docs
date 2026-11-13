@@ -116,5 +116,13 @@ export const communityApps = [
     href: 'https://verbara.app',
     tags: ['Podcasts'],
     description: 'Verbara is a podcast app for Plex, Audiobookshelf and RSS. Store your shows in one library with smart download, transcription, ad detection, metadata correction and more.'
+  },
+  {
+    name: 'Squabble Inn',
+    platforms: ['iOS', 'Android', 'Web'],
+    href: 'https://www.squabbleinn.com/',
+    tags: ['Audiobooks'],
+    description:
+      'A social audiobook app for listening with friends without spoilers. Form a private guild of up to 6, listen at your own pace, and leave comments pinned to a timestamp that stay hidden until each guildmate reaches that moment. Also a full Audiobookshelf client with offline downloads, a sleep timer, bookmarks, and listening progress reported back to your server.',
   }
 ];
