@@ -12,6 +12,16 @@
 //   Never use 'audiobookshelf://oauth', which belongs to the official app.
 export const communityApps = [
   {
+    name: 'EchoShelf',
+    platforms: ['Android', 'iOS', 'iPadOS'],
+    href: 'https://listen.lightpointecho.com/',
+    tags: ['Audiobooks'],
+    description:
+      'An independent Audiobookshelf client for iOS, iPadOS, and Android. ' +
+      'Stream your self-hosted audiobooks with background playback, progress sync, ' +
+      'a sleep timer, and bookmarks. Optional Pro upgrades include offline downloads.',
+  },
+  {
     name: 'plappa',
     auth: {oidc: {redirectUri: 'plappa://oauth'}},
     platforms: ['iOS', 'iPadOS'],
