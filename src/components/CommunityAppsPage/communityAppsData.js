@@ -116,5 +116,13 @@ export const communityApps = [
     href: 'https://verbara.app',
     tags: ['Podcasts'],
     description: 'Verbara is a podcast app for Plex, Audiobookshelf and RSS. Store your shows in one library with smart download, transcription, ad detection, metadata correction and more.'
+  },
+  {
+    name: 'Audio Tome (随心听书)',
+    platforms: ['Android', 'iOS', 'iPadOS', 'watchOS'],
+    href: 'https://www.lixiantingshu.com/',
+    tags: ['Audiobooks', 'Ebooks'],
+    description:
+      'An independent Audiobookshelf client with audiobook streaming, offline downloads, and playback progress sync. Supports ebook text-to-speech, CarPlay, and offline playback of files transferred to Apple Watch.',
   }
 ];
