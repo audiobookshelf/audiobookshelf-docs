@@ -24,9 +24,9 @@ export const communityApps = [
     name: 'Still',
     auth: {oidc: {redirectUri: 'stillapp://oauth'}},
     platforms: ['iOS', 'iPadOS', 'watchOS', 'macOS'],
-    href: 'https://github.com/7enChan/stillapp',
+    href: 'https://still.宙.space',
     tags: ['Audiobooks', 'Podcasts', 'Ebooks'],
-    description: 'A clean, native Audiobookshelf client designed for Apple devices.',
+    description: 'A clean, native Apple client for your Audiobookshelf library, bringing together audiobooks, ebooks, and podcasts with offline downloads, cross-device sync, time-synced transcripts, ebook read-along, CarPlay, widgets, Shortcuts, and a standalone Apple Watch app.',
   },
   {
     name: 'SoundLeaf',
