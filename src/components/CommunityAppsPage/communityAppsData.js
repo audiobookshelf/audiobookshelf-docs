@@ -111,6 +111,14 @@ export const communityApps = [
       'A native audiobook and podcast player for iPhone, iPad, Apple Watch, Apple TV, and Android. Includes CarPlay and Android Auto, offline downloads, chapter navigation, a sleep timer, and extras support for ePubs and PDFs.',
   },
   {
+    name: 'SonaWave',
+    platforms: ['Android', 'HarmonyOS', 'Linux', 'macOS', 'Windows'],
+    href: 'https://music.http5.cn/?lang=en',
+    tags: ['Audiobooks', 'Podcasts'],
+    description:
+      'An independent, cross-platform audio player with Audiobookshelf support. Browse audiobooks and podcasts, navigate chapters and episodes, and sync listening progress with your server.',
+  },
+  {
     name: 'Verbara',
     platforms: ['iOS', 'iPadOS'],
     href: 'https://verbara.app',
