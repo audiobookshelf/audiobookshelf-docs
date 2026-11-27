@@ -103,6 +103,14 @@ export const communityApps = [
     description: 'A standalone Apple Watch (watchOS) client designed for downloading your audiobooks and podcasts directly on your wrist, without any iPhone. Perfect for doing sports and for kids having only an Apple Watch.'
   },
   {
+    name: 'absigami',
+    auth: {oidc: {redirectUri: 'absigami://oauth'}},
+    platforms: ['Linux'],
+    href: 'https://gitlab.com/13werwolf13/absigami',
+    tags: ['Audiobooks', 'Ebooks'],
+    description:
+      '3rd party KDE Kirigami desktop client for Audiobookshelf.',
+  },
     name: 'Voca',
     platforms: ['iOS', 'iPadOS', 'watchOS', 'tvOS', 'Android'],
     href: 'https://voca.velosec.au',
