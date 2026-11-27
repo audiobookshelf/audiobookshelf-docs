@@ -40,6 +40,10 @@ This tool changes your media files. Be sure to make a backup of your files befor
 
 A calibre plugin to synchronize metadata from Audiobookshelf to calibre.
 
+## [abs-cli](https://github.com/thomaslazar/abs-cli)
+
+A cross-platform command-line client for managing a library from the terminal or a script: bulk metadata edits, collections, playlists, chapters, covers, uploads and backups. Every command maps to a single API endpoint and emits JSON on stdout, so it composes with other tools and automation. Ships as a self-contained binary for Linux, macOS and Windows with no runtime dependency.
+
 ## OPDS
 
 _[OPDS for ABS](https://github.com/Vito0912/abs-opds)_ by [Finn Dittmar](https://github.com/Vito0912)\

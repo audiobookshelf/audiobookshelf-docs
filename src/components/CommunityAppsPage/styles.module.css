@@ -13,6 +13,13 @@
   gap: 0.75rem;
 }
 
+.filterRow {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 0.75rem 2rem;
+}
+
 .filterGroup {
   display: flex;
   flex-direction: column;
@@ -101,7 +108,7 @@
   gap: 0.4rem;
 }
 
-.platformBadge {
+.cardBadge {
   display: inline-flex;
   align-items: center;
   padding: 0.3rem 0.55rem;
@@ -131,6 +138,14 @@
   flex-shrink: 0;
 }
 
+.authMethodRow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  margin-left: auto;
+  flex-shrink: 0;
+}
+
 .titleTagIcon {
   display: inline-flex;
   align-items: center;
@@ -156,6 +171,10 @@
 
   .filterGroup {
     width: 100%;
+  }
+
+  .filterRow .filterGroup {
+    width: auto;
   }
 
   .grid {

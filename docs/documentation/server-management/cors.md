@@ -17,7 +17,7 @@ You also need to add both the `http` and `https` versions of your origin if you 
 
 :::
 
-You need to add the origin of the tool you want to you. So if a tool is hosted at `https://myawesometool.tld` and your Audiobookshelf server is at `https://myaudioshelf.tld`, you need to only add `https://myawesometool.tld` to the `Allowed CORS Origins` settings.
+You need to add the origin of the tool you want to use. So if a tool is hosted at `https://myawesometool.tld` and your Audiobookshelf server is at `https://myaudioshelf.tld`, you need to only add `https://myawesometool.tld` to the `Allowed CORS Origins` settings.
 
 #### Example
 
