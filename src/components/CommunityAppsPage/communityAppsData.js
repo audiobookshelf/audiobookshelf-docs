@@ -67,6 +67,7 @@ export const communityApps = [
   },
   {
     name: 'absigami',
+    auth: {oidc: {redirectUri: 'absigami://oauth'}},
     platforms: ['Linux'],
     href: 'https://gitlab.com/13werwolf13/absigami',
     tags: ['Audiobooks', 'Ebooks'],
