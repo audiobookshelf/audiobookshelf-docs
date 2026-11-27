@@ -116,5 +116,12 @@ export const communityApps = [
     href: 'https://verbara.app',
     tags: ['Podcasts'],
     description: 'Verbara is a podcast app for Plex, Audiobookshelf and RSS. Store your shows in one library with smart download, transcription, ad detection, metadata correction and more.'
+  },
+  {
+    name: 'WatchAmp',
+    platforms: ['watchOS'],
+    href: 'https://apps.apple.com/us/app/watchamp-for-plex-jellyfin/id6761737569',
+    tags: ['Audiobooks'],
+    description: 'A native Apple Watch music & audiobook player for Audiobookshelf, Navidrome, OpenSubsonic, Plex, and Jellyfin. Stream or download your library for phone-free listening, with browsing, search, playlists, and playback controls.',
   }
 ];
